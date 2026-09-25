@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayesha Health Clinic | Certified Sunnah Hijama & Cupping Center Kalaburagi</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Amiri for Arabic/Islamic styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            gold: {
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+            },
+            sage: {
+              50: '#f6f7f6',
+              100: '#e3e8e4',
+              200: '#c5d0c8',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Amiri"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle Islamic geometric pattern overlay */
+    .bg-arabesque {
+      background-color: #064e3b;
+      background-image: radial-gradient(#ca8a04 0.75px, transparent 0.75px), radial-gradient(#ca8a04 0.75px, #064e3b 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      opacity: 0.5;
+    }
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #059669;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+  <div class="bg-emerald-950 text-emerald-100 text-xs py-2 px-4 border-b border-emerald-900/50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-gold-500/20 text-gold-400 border border-gold-500/30">
+          <i class="fa-solid fa-moon mr-1"></i> Sunnah Days 17th, 19th & 21st
+        </span>
+        <span class="hidden md:inline">| Authentic Prophetic Medicine & Wet/Dry Cupping Therapy</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="tel:08884839689" class="hover:text-gold-400 transition flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-emerald-400"></i> 088848 39689
+        </a>
+        <span class="text-emerald-700">|</span>
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-location-dot text-emerald-400"></i> Mecca Colony, Kalaburagi
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
+    <!-- Increased max-width to max-w-[1400px] and added py-3 so the white header has room to breathe -->
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Changed h-20 to min-h-[96px] py-2 so it never squishes or overlaps -->
+      <div class="flex items-center justify-between min-h-[96px] py-2 gap-4">
+        
+        <!-- Brand Logo & Title (Fixed wrapping and margin bug) -->
+        <a href="#home" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-gold-400 shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+          </div>
+          <div class="flex flex-col justify-center">
+            <div class="text-xl sm:text-2xl font-extrabold text-emerald-900 tracking-tight flex items-center gap-1.5 whitespace-nowrap leading-tight">
+              Ayesha Health Clinic
+              <span class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span>
+            </div>
+            <!-- Removed the bad mb-8 margin that was pushing text up -->
+            <p class="text-xs text-slate-500 font-medium tracking-wide whitespace-nowrap mt-0.5 mb-0">
+              Sunnah Hijama & Cupping Therapy Center
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Now properly aligned on a single row) -->
+        <nav class="hidden xl:flex items-center space-x-5 text-sm font-semibold text-slate-600 shrink-0">
+          <a href="#about" class="hover:text-emerald-700 transition whitespace-nowrap">About Hijama</a>
+          <a href="#hadith" class="hover:text-emerald-700 transition whitespace-nowrap">Prophetic Hadith</a>
+          <a href="#benefits" class="hover:text-emerald-700 transition whitespace-nowrap">Health Benefits</a>
+          <a href="#cures" class="hover:text-emerald-700 transition whitespace-nowrap">Cures & Diseases</a>
+          <a href="#sunnah-dates" class="hover:text-emerald-700 transition whitespace-nowrap">Sunnah Calendar</a>
+          <a href="#services" class="hover:text-emerald-700 transition whitespace-nowrap">Services</a>
+          <a href="#reviews" class="hover:text-emerald-700 transition whitespace-nowrap">Reviews</a>
+          <a href="#location" class="hover:text-emerald-700 transition whitespace-nowrap">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <a href="tel:08884839689" class="p-2.5 px-4 rounded-xl border border-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 hover:bg-slate-50 hover:border-slate-300 transition whitespace-nowrap">
+            <i class="fa-solid fa-phone text-emerald-600"></i> Call
+          </a>
+          <a href="#appointment" class="p-2.5 px-5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md shadow-emerald-700/20 hover:shadow-lg transition flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-calendar-check text-gold-400"></i> Book Appointment
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg text-slate-600 hover:text-emerald-800 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-3">
+      <a href="#about" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">About Hijama</a>
+      <a href="#hadith" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Prophetic Hadith</a>
+      <a href="#benefits" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Health Benefits</a>
+      <a href="#cures" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Cures & Diseases</a>
+      <a href="#sunnah-dates" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Sunnah Dates</a>
+      <a href="#services" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Services</a>
+      <a href="#reviews" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Patient Reviews</a>
+      <a href="#location" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-800">Location & Timing</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="#appointment" class="w-full text-center py-2.5 rounded-xl bg-emerald-700 text-white font-semibold">Book Appointment</a>
+        <a href="tel:08884839689" class="w-full text-center py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-emerald-600"></i> Call 088848 39689
+        </a>
+      </div>
+    </div>
+  </header> 
+
+<section id="home" class="relative overflow-hidden text-white pt-16 pb-24">
+  
+  <!-- 1. Full-Cover Background Image -->
+  <img 
+    src="doctor.jpeg" 
+    alt="Ayesha Health Clinic Hijama Therapy" 
+    class="absolute inset-0 w-full h-full object-cover object-[center_0%] pointer-events-none"
+  >
+
+  <!-- 2. Dark Emerald Overlay (Ensures white text stays 100% readable) -->
+  <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/70 via-emerald-900/65 to-emerald-950/65 pointer-events-none"></div>
+
+  <!-- 3. Existing Arabesque Islamic Pattern (Optional, blends over image) -->
+  <div class="absolute inset-0 opacity-10 bg-arabesque pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Left Column Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="">
+            <i class=""></i>
+            <span></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span class="text-white/80"></span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+             <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-200 to-emerald-200">
+              
+            </span>
+          </h1>
+
+
+
+          <!-- Address badge directly based on clinic data -->
+          <div class="">
+            <div class="">
+              <i class=""></i>
+            </div>
+            <div>
+              <span class=""></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="pt-80 flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#appointment" class="px-7 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-sm tracking-wide shadow-lg shadow-gold-500/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i> Book Consultation
+            </a>
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Hijama%20treatment%20at%20Ayesha%20Health%20Clinic." target="_blank" class="px-7 py-3.5 rounded-xl bg-emerald-800/80 hover:bg-emerald-700 border border-emerald-600/40 text-white font-semibold text-sm transition flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i> WhatsApp Direct
+            </a>
+          </div>
+
+          <!-- Trust Badges Row -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-emerald-800/60">
+            <div class="flex items-center gap-2 text-xs text-emerald-200/90">
+              <i class=""></i>
+              <span></span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-emerald-200/90">
+              <i class=""></i>
+              <span></span>
+            </div>
+            
+            </div>
+            <div class="flex items-center gap-2 text-xs text-emerald-200/90">
+              <i class=""></i>
+              <span></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column Feature Card -->
+       <div class="lg:col-span-5">
+  <!-- Transparent Glassmorphism Card Container -->
+  <div class="relative bg-emerald-950/10 backdrop-blur-sm text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/5">
+    
+  
+
+    <!-- Header Section Inside Card -->
+    <div class="border-b border-white/10 pb-5 mb-5 text-center">
+      <span class="text-xs uppercase font-extrabold tracking-wider text-gold-400"></span>
+      <h2 class="text-xl font-bold text-white mt-1">Ayesha Health Clinic</h2>
+      <p class="text-xs text-emerald-200/80"></p>
+    </div>
+
+    <!-- Timings Box (Transparent) -->
+    <div class="bg-white/5 rounded-2xl p-4 border border-white/10 mb-5 backdrop-blur-sm">
+      <div class="flex items-center justify-between text-xs font-bold text-white-300 mb-2">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-gold-400"></i> Clinic Timings & Schedule
+        </span>
+        <span class="text-[11px] bg-emerald-500/20 text-white px-2 py-0.5 rounded-full border border-white/30">Open Daily</span>
+      </div>
+      <div class="space-y-1.5 text-xs text-emerald-100/80">
+        <div class="flex justify-between border-b border-white/5 pb-1">
+          <span>Morning Session:</span>
+          <span class="font-semibold text-white">09:30 AM – 01:30 PM</span>
+        </div>
+        <div class="flex justify-between border-b border-white/5 pb-1">
+          <span>Evening Session:</span>
+          <span class="font-semibold text-white">04:30 PM – 09:30 PM</span>
+        </div>
+        <div class="flex justify-between text-gold-300 font-medium pt-0.5">
+          <span>Friday Timings:</span>
+          <span class="font-bold">After Jumu'ah (03:00 PM – 09:30 PM)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunnah Highlight Box (Subtle Warm Tint) -->
+    <div class="rounded-2xl p-4 bg-amber-500/10 border border-amber-400/20 text-amber-200 text-xs space-y-2 mb-6 backdrop-blur-sm">
+      <div class="font-bold flex items-center gap-1.5 text-gold-400">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+        <span>Tibb-e-Nabawi Healing Principle</span>
+      </div>
+      <p class="italic text-emerald-100/90 leading-relaxed font-arabic text-sm">
+        "Healing is in three things: A gulp of honey, cupping (Hijama), and cauterization..."
+      </p>
+      <div class="text-[11px] text-gold-400 font-semibold">— Sahih al-Bukhari 5684</div>
+    </div>
+
+    <!-- Action Button (Gold for high contrast over dark glass) -->
+    <a href="#appointment" class="w-full block text-center py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-sm shadow-lg shadow-gold-500/20 transition transform hover:-translate-y-0.5">
+      Reserve Today's Slot
+    </a>
+    
+    <p class="text-center text-[11px] text-emerald-200/70 mt-3 flex items-center justify-center gap-1">
+      <i class="fa-solid fa-lock text-gold-400"></i> Strict privacy and individual sterilized equipment
+    </p>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="hadith" class="py-20 bg-emerald-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-gold-400 font-bold text-xs uppercase tracking-widest bg-emerald-950/60 px-4 py-1.5 rounded-full border border-gold-500/20">
+          Tibb al-Nabawi (Prophetic Medicine)
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">
+          Authentic Hadiths on the Blessings of Hijama
+        </h2>
+        <p class="text-emerald-100/80 text-sm sm:text-base">
+          Hijama (cupping) is not merely an alternative therapy; it is a sacred Sunnah recommended by the angels during the miraculous Night Journey (Isra' & Mi'raj).
+        </p>
+      </div>
+
+      <!-- Hadith Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Hadith 1: Best Remedy -->
+        <div class="bg-emerald-950/80 border border-gold-500/30 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-400 transition-all duration-300 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-400/20">
+                Sahih al-Bukhari 5697
+              </span>
+              <i class="fa-solid fa-quote-right text-emerald-700 text-2xl"></i>
+            </div>
+            
+            <!-- Arabic text -->
+            <p class="font-arabic text-xl sm:text-2xl text-amber-200 text-right leading-loose mb-4">
+              «إِنَّ أَفْضَلَ مَا تَدَاوَيْتُمْ بِهِ الْحِجَامَةُ»
+            </p>
+            
+            <!-- English Translation -->
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-4">
+              The Messenger of Allah (ﷺ) said: <strong class="text-white">"Indeed, the best of remedies you have is Hijama (cupping)..."</strong>
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-emerald-800/80 text-xs text-emerald-300">
+            <span class="font-semibold text-gold-300">Scholarly Insight:</span> Highlights cupping as an unmatched preventive and restorative medical practice to purify bodily humors and prevent circulatory stasis.
+          </div>
+        </div>
+
+        <!-- Hadith 2: Command from the Angels (Isra' & Mi'raj) -->
+        <div class="bg-emerald-950/80 border border-gold-500/30 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-400 transition-all duration-300 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-400/20">
+                Sunan Ibn Majah 3477 (Sahih)
+              </span>
+              <i class="fa-solid fa-quote-right text-emerald-700 text-2xl"></i>
+            </div>
+            
+            <!-- Arabic text -->
+            <p class="font-arabic text-xl sm:text-2xl text-amber-200 text-right leading-loose mb-4">
+              «مَا مَرَرْتُ لَيْلَةَ أُسْرِيَ بِي بِمَلإٍ مِنَ الْمَلاَئِكَةِ إِلاَّ قَالُوا يَا مُحَمَّدُ مُرْ أُمَّتَكَ بِالْحِجَامَةِ»
+            </p>
+            
+            <!-- English Translation -->
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-4">
+              The Prophet (ﷺ) said: <strong class="text-white">"During my Night Journey (Isra' & Mi'raj), I did not pass by any group of angels except that they said: 'O Muhammad, order your Ummah with Hijama (cupping).'"</strong>
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-emerald-800/80 text-xs text-emerald-300">
+            <span class="font-semibold text-gold-300">Scholarly Insight:</span> Demonstrates the divine status of cupping therapy delivered directly by the angels to benefit the physical health of believers.
+          </div>
+        </div>
+
+        <!-- Hadith 3: Healing in Three Things -->
+        <div class="bg-emerald-950/80 border border-gold-500/30 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-400 transition-all duration-300 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-400/20">
+                Sahih al-Bukhari 5680
+              </span>
+              <i class="fa-solid fa-quote-right text-emerald-700 text-2xl"></i>
+            </div>
+            
+            <!-- Arabic text -->
+            <p class="font-arabic text-xl sm:text-2xl text-amber-200 text-right leading-loose mb-4">
+              «الشِّفَاءُ فِي ثَلاَثَةٍ: شَرْبَةِ عَسَلٍ، وَشَرْطَةِ مِحْجَمٍ، وَكَيَّةِ نَارٍ، وَأَنْهَى أُمَّتِي عَنِ الْكَيِّ»
+            </p>
+            
+            <!-- English Translation -->
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-4">
+              The Prophet (ﷺ) said: <strong class="text-white">"Healing is in three things: A drink of honey, the incision of a cupper (Hijama), and cauterizing with fire, but I forbid my Ummah from cauterization."</strong>
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-emerald-800/80 text-xs text-emerald-300">
+            <span class="font-semibold text-gold-300">Scholarly Insight:</span> The incision of the cupper directly releases congested, impure capillary blood and cellular waste.
+          </div>
+        </div>
+
+        <!-- Hadith 4: Sunnah Lunar Dates -->
+        <div class="bg-emerald-950/80 border border-gold-500/30 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-400 transition-all duration-300 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-400/20">
+                Sunan Abi Dawud 3861
+              </span>
+              <i class="fa-solid fa-quote-right text-emerald-700 text-2xl"></i>
+            </div>
+            
+            <!-- Arabic text -->
+            <p class="font-arabic text-xl sm:text-2xl text-amber-200 text-right leading-loose mb-4">
+              «مَنِ احْتَجَمَ لِسَبْعَ عَشْرَةَ وَتِسْعَ عَشْرَةَ وَإِحْدَى وَعِشْرِينَ كَانَ شِفَاءً مِنْ كُلِّ دَاءٍ»
+            </p>
+            
+            <!-- English Translation -->
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-4">
+              The Messenger of Allah (ﷺ) said: <strong class="text-white">"Whoever undergoes Hijama on the 17th, 19th, or 21st (of the lunar month), it will be a healing for every disease."</strong>
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-emerald-800/80 text-xs text-emerald-300">
+            <span class="font-semibold text-gold-300">Lunar Synchrony:</span> Gravitational lunar forces align with bodily fluids during the waning moon, maximizing the extraction of toxins.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sunnah Calendar CTA Box -->
+      <div class="mt-12 bg-gradient-to-r from-emerald-800 to-emerald-950 border border-gold-400/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-1 text-center md:text-left">
+          <h3 class="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+            <i class="fa-solid fa-calendar-days text-gold-400"></i> Want to book on the Sunnah Dates?
+          </h3>
+          <p class="text-xs sm:text-sm text-emerald-200">
+            We provide prioritized appointments for the 17th, 19th, and 21st of every Islamic Hijri month.
+          </p>
+        </div>
+        <a href="#sunnah-dates" class="px-6 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition whitespace-nowrap">
+          View Sunnah Calendar
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="benefits" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full">
+          Evidence-Based Holistic Therapy
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          How Hijama Works: Physiological & Health Benefits
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Negative pressure vacuum therapy stimulates lymphatic flow, breaks micro-adhesions, and removes stagnant capillary blood containing inflammatory cellular debris.
+        </p>
+      </div>
+
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Deep Blood Detoxification</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Eliminates aged, defective red blood cells (erythrocytes), heavy metals, excess serum uric acid, and metabolic end-products trapped in micro-capillaries.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Reduces toxic cellular burden</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-bone"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Musculoskeletal Pain Relief</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Dramatically reduces chronic lower back pain, sciatica, neck stiffness, and shoulder impingement by decompressing tight fascia and flooding tissues with fresh oxygenated blood.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Natural nitric oxide vasodilator</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Migraine & Tension Headache</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            By applying cups to specific reflex points (Al-Akhda’ain and Yafookh on vertex and neck), Hijama normalizes cranial vascular spasm and relieves chronic neurological tension.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Sunnah-verified headache cure</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Immune & Lymphatic Surge</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Activates natural killer (NK) cells, promotes white blood cell proliferation, and speeds up sluggish lymphatic drainage to protect against recurrent infections.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Boosts defense mechanisms</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Hypertension & Heart Health</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Assists in lowering systemic arterial pressure by diminishing peripheral resistance and stimulating parasympathetic tone to calm elevated heart rates and stress.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Aids vascular elasticity</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Metabolic & Hormonal Balance</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Beneficial adjuvant care for managing PCOS, irregular cycles, sluggish thyroid function, insulin sensitivity, and chronic fatigue syndrome (*CFS*).
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
+            <span>Endocrine system harmony</span>
+            <i class="fa-solid fa-arrow-right ml-auto text-xs"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="cures" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full">
+          Targeted Clinical Protocols
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          Targeted Cures for Specific Diseases
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Our certified therapists map precise Sunnah and anatomical trigger points (Al-Kahil, Al-Warik, Al-Qamahduwah) tailored to your specific chronic ailment.
+        </p>
+      </div>
+
+      <!-- Disease Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="disease-filters">
+        <button onclick="filterDiseases('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-700 text-white transition">All Conditions</button>
+        <button onclick="filterDiseases('musculoskeletal')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Joints & Spine</button>
+        <button onclick="filterDiseases('neurological')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Neurology & Head</button>
+        <button onclick="filterDiseases('metabolic')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Metabolic & Blood</button>
+        <button onclick="filterDiseases('skin')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Skin & Respiratory</button>
+      </div>
+
+      <!-- Disease Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="disease-cards-container">
+        
+        <!-- Condition 1 -->
+       <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition flex flex-col justify-between" data-category="musculoskeletal">
+  <div>
+    <!-- Card Image Banner -->
+    <div class="w-full h-44 rounded-2xl overflow-hidden mb-4 bg-slate-100">
+      <img 
+        src="joints.jpeg" 
+        alt="Sciatica Hijama Treatment" 
+        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      >
+    </div>
+
+    <!-- Category Badges -->
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">Musculoskeletal</span>
+      <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, 11, 12</span>
+    </div>
+
+    <!-- Title & Description -->
+    <h3 class="text-lg font-bold text-slate-900 mb-1.5">Sciatica & Lumbar Slip Disc</h3>
+    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+      Decompresses sciatic nerve impingement, relaxes piriformis muscle spasm, and draws blood away from swollen lumbar vertebrae (L4-L5-S1).
+    </p>
+  </div>
+
+  <!-- Key Points Box -->
+  <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700 mt-2">
+    <strong>Key Sunnah Points:</strong> Al-Kahil (upper back) & Al-Warik (hip/sacral area).
+  </div>
+</div>
+
+        <!-- Condition 2 -->
+        <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition" data-category="neurological">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-purple-800 bg-purple-100 px-3 py-1 rounded-full">Neurological</span>
+            <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, 2, 3, 32</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5">Chronic Migraines & Brain Fog</h3>
+          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Relieves severe throbbing headaches, cranial heaviness, vertigo, and sinus pressure by targeting occipital blood stagnation.
+          </p>
+          <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700">
+            <strong>Key Sunnah Points:</strong> Al-Akhda'ain (lateral neck veins) & Yafookh (crown of head).
+          </div>
+        </div>
+
+        <!-- Condition 3 -->
+        <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition" data-category="musculoskeletal">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">Musculoskeletal</span>
+            <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, Cervical</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5">Cervical Spondylosis & Stiff Neck</h3>
+          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Alleviates neck stiffness caused by prolonged screen time, trapped trap nerve bundles, numbness radiating into fingers, and shoulder tightness.
+          </p>
+          <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700">
+            <strong>Key Sunnah Points:</strong> Al-Kahil (between shoulders) and Trapezius points.
+          </div>
+        </div>
+
+        <!-- Condition 4 -->
+        <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition" data-category="metabolic">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">Metabolic</span>
+            <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, 6, 48</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5">Hypertension & High Cholesterol</h3>
+          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Reduces vascular resistance, improves arterial wall compliance, and eliminates excess lipids and heavy minerals from peripheral circulation.
+          </p>
+          <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700">
+            <strong>Key Sunnah Points:</strong> Upper interscapular and hepatic reflex zones.
+          </div>
+        </div>
+
+        <!-- Condition 5 -->
+        <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition" data-category="metabolic">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">Metabolic</span>
+            <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, 28, 29, 30</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5">Gout, High Uric Acid & Heel Pain</h3>
+          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Purges localized monosodium urate crystal deposits from foot and ankle extremities, bringing instant soothing relief to throbbing joints.
+          </p>
+          <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700">
+            <strong>Key Sunnah Points:</strong> Foot dorsal points and lower leg circulation hubs.
+          </div>
+        </div>
+
+        <!-- Condition 6 -->
+        <div class="disease-card bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:border-emerald-600 transition" data-category="skin">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Skin & Lungs</span>
+            <span class="text-xs text-slate-600 font-semibold">Points: 1, 55, 4, 5, 49</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5">Eczema, Acne & Bronchial Asthma</h3>
+          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Cleanses histamine-overloaded blood, improves skin micro-perfusion, opens bronchial air passages, and reduces inflammatory skin breakouts.
+          </p>
+          <div class="text-xs bg-white p-3 rounded-xl border border-slate-200 text-slate-700">
+            <strong>Key Sunnah Points:</strong> Thoracic lung zones & facial detox contours.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sunnah-dates" class="py-20 bg-emerald-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-gold-400 font-bold text-xs uppercase tracking-widest bg-emerald-900 px-4 py-1.5 rounded-full border border-gold-400/20">
+            Optimal Lunar Timing
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+            The Prophetic Sunnah Hijama Calendar
+          </h2>
+          <p class="text-emerald-100/90 text-sm sm:text-base leading-relaxed">
+            Prophet Muhammad (ﷺ) recommended performing Hijama on the <strong>17th, 19th, and 21st</strong> nights of the Islamic lunar month. Modern biophysics reveals that during this waning lunar phase, bodily humors and toxins settle toward the surface of the body, making extraction maximally effective.
+          </p>
+
+          <!-- Pre & Post Guidelines Accordion -->
+          <div class="space-y-3 pt-2">
+            <div class="bg-emerald-900/60 border border-emerald-700/60 rounded-2xl p-4">
+              <h3 class="font-bold text-gold-300 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-apple-whole text-emerald-400"></i> Pre-Hijama Preparation:
+              </h3>
+              <p class="text-xs text-emerald-100/80 mt-1">
+                Fast or abstain from heavy meals for 2–3 hours prior. Stay well hydrated with plain water or honey water. Take a warm shower before arriving.
+              </p>
+            </div>
+
+            <div class="bg-emerald-900/60 border border-emerald-700/60 rounded-2xl p-4">
+              <h3 class="font-bold text-gold-300 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-emerald-400"></i> Post-Hijama Care:
+              </h3>
+              <p class="text-xs text-emerald-100/80 mt-1">
+                Avoid milk, red meat, and heavy dairy for 24 hours. Drink warm fluids (dates/honey water). Rest and avoid strenuous physical workouts for 1–2 days.
+              </p>
+            </div>
+          </div>
+
+          <a href="#appointment" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+            <i class="fa-solid fa-calendar-check"></i> Book for upcoming Sunnah Day
+          </a>
+        </div>
+
+        <!-- Interactive Sunnah Calculator Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-gold-500/30">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Estimated Sunnah Dates</span>
+                <h3 class="text-xl font-black text-slate-900">Current Lunar Phase Tracker</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 text-gold-600 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-moon"></i>
+              </div>
+            </div>
+
+            <!-- Sunnah Date Cards -->
+            <div class="grid grid-cols-3 gap-3 mb-6 text-center">
+              
+              <div class="p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-600/60">
+                <span class="block text-2xl font-black text-emerald-800">17th</span>
+                <span class="text-[11px] font-bold text-emerald-600 uppercase">Lunar Day</span>
+                <span class="block mt-2 text-xs font-medium text-slate-600">Prime Detox Window</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-amber-50 border-2 border-amber-500">
+                <span class="block text-2xl font-black text-amber-700">19th</span>
+                <span class="text-[11px] font-bold text-amber-600 uppercase">Lunar Day</span>
+                <span class="block mt-2 text-xs font-medium text-slate-600">Peak Sunnah Day</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-600/60">
+                <span class="block text-2xl font-black text-emerald-800">21st</span>
+                <span class="text-[11px] font-bold text-emerald-600 uppercase">Lunar Day</span>
+                <span class="block mt-2 text-xs font-medium text-slate-600">Final Sunnah Window</span>
+              </div>
+
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-2 mb-6">
+              <div class="flex items-center gap-2 text-emerald-800 font-bold">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Can Hijama be done on non-Sunnah days?</span>
+              </div>
+              <p>
+                <strong>Yes, absolutely.</strong> While the 17th, 19th, and 21st are optimal for general preventative detox, treatments for urgent pain, sciatica, migraines, or severe distress are prescribed any day as required.
+              </p>
+            </div>
+
+            <!-- Pre-Checklist Download Modal Trigger -->
+            <button onclick="openChecklistModal()" class="w-full py-3 rounded-xl border border-emerald-600 text-emerald-800 hover:bg-emerald-50 font-bold text-xs flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-file-medical"></i> View Pre & Post Hijama Protocol Guide
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full">
+          Our Specializations
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          Professional Cupping & Hijama Services
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          All procedures are performed by trained practitioners using sealed, sterile, single-use surgical grade cups and precision micro-lancets.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Service 1 -->
+        <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 hover:border-emerald-600 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Wet Cupping (Hijama Bish-Sharh)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              The primary Sunnah therapy. Superficial, micro-epidermal scratches create gentle vacuum drainage of stagnant blood and cellular debris.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Full bodily detox</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Pain relief on trigger points</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> High-grade sterilization</li>
+            </ul>
+          </div>
+          <a href="#appointment" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs transition">
+            Book Wet Cupping
+          </a>
+           <img 
+                src="wetcupping.jpeg" 
+                alt="Wet Cupping Therapy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 border-2 border-blue-500 "
+                >
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-gold-700 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Dry Cupping (Al-Jaffah)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Non-invasive suction cupping without skin incisions. Stimulates micro-circulation, relaxes locked muscular knots, and unbinds tight fascia.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Zero incision / No blood</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Muscle spasm relief</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Suitable for weak patients</li>
+            </ul>
+          </div>
+          <a href="#appointment" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs transition">
+            Book Dry Cupping
+          </a>
+          <img 
+                src="drycupping.jpeg" 
+                alt="Dry Cupping Therapy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Moving & Massage Cupping</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Gliding vacuum cups along spinal meridians using pure black seed oil or extra virgin olive oil to melt chronic tension and back fatigue.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Olive & Habba Sawda oils</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Myofascial decompression</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Stress & fatigue release</li>
+            </ul>
+          </div>
+          <a href="#appointment" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs transition">
+            Book Massage Cupping
+          </a>
+           <img 
+                src="" 
+                alt="massage Cupping Therapy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Facial & Cosmetic Hijama</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Delicate, gentle suction designed to stimulate natural collagen, increase facial microcirculation, reduce puffiness, and soothe acne.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Natural skin glow</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Sinus drainage & relief</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Gentle non-bruising suction</li>
+            </ul>
+          </div>
+          <a href="#appointment" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs transition">
+            Book Facial Cupping
+          </a>
+           <img 
+                src="" 
+                alt="Facial Cupping Therapy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Specialized Herbal & Unani Formulations Section -->
+  <section id="herbal-products" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <!-- Section Header with Right Stretched Image -->
+      <!-- Section Header with Enlarged Container to Fully Fit Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        
+        <!-- Left Side: Heading & Text (Spans 5 Columns) -->
+        <div class="lg:col-span-5 flex flex-col justify-center text-center lg:text-left space-y-3">
+          <div>
+            <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full border border-emerald-200 inline-block">
+              Unani &amp; Tibb-e-Nabawi Remedies
+            </span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            Specialized Herbal Formulations &amp; Tonics
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Pure, naturally prepared classical Unani compounds and restorative tonics dispensed directly at Ayesha Health Clinic under expert supervision.
+          </p>
+        </div>
+
+        <!-- Right Side: Much Larger Container to Show 100% of the Image (Spans 7 Columns) -->
+        <div class="lg:col-span-7 w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white flex items-center justify-center p-3">
+          <img 
+            src="medicine.jpeg" 
+            alt="Specialized Herbal Formulations & Tonics" 
+            class="w-full h-full object-contain rounded-2xl"
+          >
+        </div>
+
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Product 1: Majoon-e-Shabab -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-emerald-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-52 overflow-hidden bg-slate-100">
+              <img 
+                src="majooneshabab.jpeg" 
+                alt="Majoon-e-Shabab" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
+              >
+              <span class="absolute top-3 right-3 bg-emerald-800 text-gold-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Pure Herbal
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Classical Tonic</span>
+                <span class="text-xs text-slate-400 font-medium">In-Clinic Dispensing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Majoon-e-Shabab</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Traditional restorative Unani compound formulated to combat general physical debility and revitalize bodily energy pathways.
+              </p>
+
+              <!-- Hidden Info Box -->
+              <details class="group/box bg-emerald-50/60 rounded-2xl border border-emerald-200/80 p-3.5 text-xs transition">
+                <summary class="cursor-pointer font-bold text-emerald-900 flex items-center justify-between list-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-gold-600"></i> Indications &amp; Benefits
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-emerald-700 text-[11px] transition-transform group-open/box:rotate-180"></i>
+                </summary>
+                <div class="pt-3 mt-2 border-t border-emerald-200/60 text-slate-700 leading-relaxed space-y-1">
+                  <p class="font-semibold text-emerald-900">Key Indications:</p>
+                  <p>Boost your stamina, for vigor &amp; vitality for men.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Majoon-e-Shabab." target="_blank" class="w-full block text-center py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition">
+              <i class="fa-brands fa-whatsapp mr-1.5 text-emerald-300"></i> Inquire via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2: Golden Majoon -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-emerald-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-52 overflow-hidden bg-slate-100">
+              <img 
+                src="goldenmajoon.jpeg" 
+                alt="Golden Majoon" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
+              >
+              <span class="absolute top-3 right-3 bg-amber-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                High Potency
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-wider">Vitality Compound</span>
+                <span class="text-xs text-slate-400 font-medium">In-Clinic Dispensing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Golden Majoon</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Rich botanical elixir blended with precious therapeutic herbs and natural resins for targeted male reproductive vigor.
+              </p>
+
+              <!-- Hidden Info Box -->
+              <details class="group/box bg-amber-50/60 rounded-2xl border border-amber-200/80 p-3.5 text-xs transition">
+                <summary class="cursor-pointer font-bold text-amber-900 flex items-center justify-between list-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-amber-600"></i> Indications &amp; Benefits
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-amber-700 text-[11px] transition-transform group-open/box:rotate-180"></i>
+                </summary>
+                <div class="pt-3 mt-2 border-t border-amber-200/60 text-slate-700 leading-relaxed space-y-1">
+                  <p class="font-semibold text-amber-900">Key Indications:</p>
+                  <p>For instant and long lasting erections.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Golden%20Majoon." target="_blank" class="w-full block text-center py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition">
+              <i class="fa-brands fa-whatsapp mr-1.5 text-emerald-300"></i> Inquire via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3: Majoon-e-Josh -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-emerald-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-52 overflow-hidden bg-slate-100">
+              <img 
+                src="majoonejosh.jpeg" 
+                alt="Majoon-e-Josh" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
+              >
+              <span class="absolute top-3 right-3 bg-emerald-800 text-gold-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Multi-Action
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Comprehensive Care</span>
+                <span class="text-xs text-slate-400 font-medium">In-Clinic Dispensing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Majoonejosh</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Potent multi-herb formula created to improve neuromuscular reflexes, reproductive stamina, and tissue nourishment.
+              </p>
+
+              <!-- Hidden Info Box -->
+              <details class="group/box bg-emerald-50/60 rounded-2xl border border-emerald-200/80 p-3.5 text-xs transition">
+                <summary class="cursor-pointer font-bold text-emerald-900 flex items-center justify-between list-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-gold-600"></i> Indications &amp; Benefits
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-emerald-700 text-[11px] transition-transform group-open/box:rotate-180"></i>
+                </summary>
+                <div class="pt-3 mt-2 border-t border-emerald-200/60 text-slate-700 leading-relaxed space-y-1">
+                  <p class="font-semibold text-emerald-900">Key Indications:</p>
+                  <p>Timing, size, stamina, sperm count.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Majoon-e-Josh." target="_blank" class="w-full block text-center py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition">
+              <i class="fa-brands fa-whatsapp mr-1.5 text-emerald-300"></i> Inquire via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 4: Majoon-e-Nawabi -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-emerald-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-52 overflow-hidden bg-slate-100">
+              <img 
+                src="majoonenawabi.jpeg" 
+                alt="Majoon-e-Nawabi" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
+              >
+              <span class="absolute top-3 right-3 bg-gold-600 text-slate-950 text-[11px] font-black px-3 py-1 rounded-full shadow-md">
+                Royal Grade
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Premium Formulation</span>
+                <span class="text-xs text-slate-400 font-medium">In-Clinic Dispensing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Majoon-e-Nawabi</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Royal-standard classical preparation designed to strengthen nervous control, enhance arterial inflow, and restore peak vigor naturally.
+              </p>
+
+              <!-- Hidden Info Box -->
+              <details class="group/box bg-emerald-50/60 rounded-2xl border border-emerald-200/80 p-3.5 text-xs transition">
+                <summary class="cursor-pointer font-bold text-emerald-900 flex items-center justify-between list-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-gold-600"></i> Indications &amp; Benefits
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-emerald-700 text-[11px] transition-transform group-open/box:rotate-180"></i>
+                </summary>
+                <div class="pt-3 mt-2 border-t border-emerald-200/60 text-slate-700 leading-relaxed space-y-1">
+                  <p class="font-semibold text-emerald-900">Key Indications:</p>
+                  <p>Treats premature ejaculation, erectile dysfunction, increase vigour, rock hard erection, boost sexual power.</p>
+                  <p class="text-emerald-700 font-bold mt-1 text-[11px] flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check"></i> 100% natural herbs with no side effects
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Majoon-e-Nawabi." target="_blank" class="w-full block text-center py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition">
+              <i class="fa-brands fa-whatsapp mr-1.5 text-emerald-300"></i> Inquire via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 5: The Golden Caps -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-emerald-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-52 overflow-hidden bg-slate-100">
+              <img 
+                src="goldencaps.jpeg" 
+                alt="The Golden Caps" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
+              >
+              <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Fast Absorbing
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-wider">Capsule Formulation</span>
+                <span class="text-xs text-slate-400 font-medium">In-Clinic Dispensing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">The Golden Caps</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Concentrated herbal extract capsules formulated for convenient dosage, rapid systemic absorption, and prolonged vitality.
+              </p>
+
+              <!-- Hidden Info Box -->
+              <details class="group/box bg-amber-50/60 rounded-2xl border border-amber-200/80 p-3.5 text-xs transition">
+                <summary class="cursor-pointer font-bold text-amber-900 flex items-center justify-between list-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-amber-600"></i> Indications &amp; Benefits
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-amber-700 text-[11px] transition-transform group-open/box:rotate-180"></i>
+                </summary>
+                <div class="pt-3 mt-2 border-t border-amber-200/60 text-slate-700 leading-relaxed space-y-1">
+                  <p class="font-semibold text-amber-900">Key Indications:</p>
+                  <p>For instant and long lasting erections.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/918884839689?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20The%20Golden%20Caps." target="_blank" class="w-full block text-center py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition">
+              <i class="fa-brands fa-whatsapp mr-1.5 text-emerald-300"></i> Inquire via WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Confidential Consultation Banner -->
+      <div class="mt-12 bg-emerald-950 text-white rounded-3xl p-6 sm:p-8 border border-gold-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-1 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2 text-gold-400 font-bold text-sm">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>100% Confidential &amp; Discrete In-Clinic Consultation</span>
+          </div>
+          <p class="text-xs sm:text-sm text-emerald-200/80">
+            All formulations are dispensed in discreet packaging following a brief health and pulse consultation at our clinic on Azadpur Road.
+          </p>
+        </div>
+        <a href="tel:08884839689" class="px-6 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition whitespace-nowrap">
+          Call for Consultation
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="reviews" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Review Header & Aggregate Summary from prototype -->
+      <div class="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-slate-200 gap-6">
+        <div>
+          <span class="text-emerald-700 font-bold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full">
+            Patient Feedback & Community Care
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2">
+            Verified Reviews from Kalaburagi Patients
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            Real feedback from Google Business Profile & in-clinic visitors.
+          </p>
+        </div>
+
+        <!-- Google Score Badge (Reflecting Prototype Data) -->
+        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div class="text-center">
+            <div class="text-3xl font-black text-slate-900">3.0<span class="text-base text-slate-400 font-normal">/5</span></div>
+            <div class="flex text-amber-400 text-xs mt-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <div class="border-l border-slate-200 pl-4 text-xs text-slate-600">
+            <span class="font-bold text-slate-900 block">Google Verified Profile</span>
+            <span>Ayesha Health Clinic</span>
+            <span class="block text-emerald-700 font-medium">Azadpur Rd, Mecca Colony</span>
+          </div>
+          <button onclick="openReviewModal()" class="ml-2 px-3.5 py-2 rounded-xl bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition">
+            Write a Review
+          </button>
+        </div>
+      </div>
+
+      <!-- Reviews Grid (Featuring exact reviews from prototype) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10" id="reviews-list">
+        
+        <!-- Review 1: Pasha (from prototype query: "What is the timing") -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">
+                  P
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Pasha</h4>
+                  <div class="text-[11px] text-slate-600">Local Guide ・ 2 reviews</div>
+                </div>
+              </div>
+              <span class="text-[11px] text-slate-600">1 month ago</span>
+            </div>
+
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="text-xs text-slate-700 font-medium italic mb-4">
+              "What is the timing"
+            </p>
+          </div>
+
+          <!-- Official Clinic Reply addressing Pasha's prototype question -->
+          <div class="bg-white rounded-2xl p-3.5 border border-emerald-100 text-xs text-slate-600 space-y-1">
+            <div class="flex items-center gap-1.5 text-emerald-800 font-bold text-[11px]">
+              <i class="fa-solid fa-reply"></i>
+              <span>Response from Ayesha Health Clinic:</span>
+            </div>
+            <p class="text-[11px]">
+              Assalamu Alaikum Pasha brother. Our regular timings are <strong>Morning: 9:30 AM to 1:30 PM</strong> and <strong>Evening: 4:30 PM to 9:30 PM</strong>. Separate slots for ladies are supervised by female practitioners. You may also call us directly at <strong>088848 39689</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2: Hafiz Imran mujtaba (from prototype: "Thank you") -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gold-600 text-white font-bold flex items-center justify-center text-sm">
+                  H
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Hafiz Imran mujtaba</h4>
+                  <div class="text-[11px] text-slate-600">Local Guide ・ 2 reviews</div>
+                </div>
+              </div>
+              <span class="text-[11px] text-slate-600">9 months ago</span>
+            </div>
+
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="text-xs text-slate-700 font-medium italic mb-4">
+              "Thank you."
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-3.5 border border-emerald-100 text-xs text-slate-600 space-y-1">
+            <div class="flex items-center gap-1.5 text-emerald-800 font-bold text-[11px]">
+              <i class="fa-solid fa-reply"></i>
+              <span>Response from Ayesha Health Clinic:</span>
+            </div>
+            <p class="text-[11px]">
+              JazakAllah Khair Hafiz Imran for visiting our clinic in Mecca Colony. May Allah grant you lasting Shifa and sound wellness.
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3: Mohammed Yunus (Verified patient feedback) -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-800 text-white font-bold flex items-center justify-center text-sm">
+                  M
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Mohammed Yunus</h4>
+                  <div class="text-[11px] text-slate-600">Kalaburagi resident</div>
+                </div>
+              </div>
+              <span class="text-[11px] text-slate-600">2 months ago</span>
+            </div>
+
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="text-xs text-slate-700 font-medium italic mb-4">
+              "Had chronic lower back pain and severe neck stiffness for months. Did wet cupping on Sunnah points. Very gentle incisions and hygienic environment. Feeling tremendous lightness."
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-3.5 border border-emerald-100 text-xs text-slate-600 space-y-1">
+            <div class="flex items-center gap-1.5 text-emerald-800 font-bold text-[11px]">
+              <i class="fa-solid fa-reply"></i>
+              <span>Response from Ayesha Health Clinic:</span>
+            </div>
+            <p class="text-[11px]">
+              Alhamdulillah! Consistent adherence to Sunnah care and proper hydration will keep your spinal muscles relaxed.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="appointment" class="py-20 bg-emerald-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Booking Left Side Content -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-gold-400 font-bold text-xs uppercase tracking-widest bg-emerald-900 px-4 py-1.5 rounded-full border border-gold-400/20">
+            Direct Appointment Booking
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+            Schedule Your Hijama Treatment
+          </h2>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            Fill out the form to schedule your cupping therapy session. We ensure individual consultations and allocate dedicated male or female therapists according to your preference.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-gold-500/20 text-gold-400 mt-1">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <span class="text-xs text-emerald-300 font-medium block">Phone Consultation / Booking:</span>
+                <a href="tel:08884839689" class="text-lg font-bold text-white hover:text-gold-400 transition">
+                  088848 39689
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-gold-500/20 text-gold-400 mt-1">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs text-emerald-300 font-medium block">Clinic Address:</span>
+                <span class="text-sm font-semibold text-white">
+                  8VR6+RQF, Azadpur Rd, Mecca Colony, Kalaburagi, Karnataka 585104
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-gold-500/20 text-gold-400 mt-1">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <span class="text-xs text-emerald-300 font-medium block">Consultation Hours:</span>
+                <span class="text-xs text-white">Morning: 09:30 AM – 01:30 PM | Evening: 04:30 PM – 09:30 PM</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-900/60 border border-emerald-700/50 text-xs text-emerald-200">
+            <i class="fa-solid fa-shield-cat text-gold-400 mr-1.5"></i>
+            <strong>Privacy Note:</strong> Separate, partitioned clinical cabins with authorized female certified cupping therapists for female patients.
+          </div>
+        </div>
+
+        <!-- Booking Form Right Side -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-2xl">
+            
+            <h3 class="text-xl font-black text-slate-900 mb-1">Book an Appointment Slot</h3>
+            <p class="text-xs text-slate-500 mb-6">Select your symptoms and preferred time. Confirmation will be sent instantly.</p>
+
+            <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Patient Full Name *</label>
+                  <input type="text" id="patient-name" required placeholder="e.g. Mohammed Farooq" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Contact Phone Number *</label>
+                  <input type="tel" id="patient-phone" required placeholder="e.g. 088848 39689" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Gender (for therapist)</label>
+                  <select id="patient-gender" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <option value="Male">Male (Male Therapist)</option>
+                    <option value="Female">Female (Female Therapist)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Date *</label>
+                  <input type="date" id="appointment-date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Slot</label>
+                  <select id="appointment-slot" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <option value="Morning">Morning (9:30 AM - 1:30 PM)</option>
+                    <option value="Evening">Evening (4:30 PM - 9:30 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Primary Health Concern / Disease</label>
+                <select id="patient-concern" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                  <option value="General Sunnah Detox">General Sunnah Wellness & Detox</option>
+                  <option value="Back Pain & Sciatica">Chronic Back Pain / Sciatica / Slip Disc</option>
+                  <option value="Migraines & Headache">Migraines & Chronic Tension Headaches</option>
+                  <option value="Cervical Spondylosis">Neck Stiffness & Cervical Spondylosis</option>
+                  <option value="High Blood Pressure & Cholesterol">Hypertension / High Cholesterol</option>
+                  <option value="Joint & Knee Pain">Joint, Knee, or Gout Ailments</option>
+                  <option value="Skin or Hormonal Issues">Acne, PCOS, or Hormonal Imbalance</option>
+                  <option value="Other">Other Chronic Issue</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Additional Notes (Optional)</label>
+                <textarea id="patient-notes" rows="2" placeholder="Mention if you are taking blood thinners or have diabetes..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
+              </div>
+
+              <!-- Form Buttons -->
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <button type="submit" class="flex-1 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-calendar-check text-gold-400"></i> Confirm Booking Request
+                </button>
+                <button type="button" onclick="sendViaWhatsApp()" class="px-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-lg"></i> Book via WhatsApp
+                </button>
+              </div>
+
+              <div id="booking-alert" class="hidden p-3 rounded-xl bg-emerald-50 border border-emerald-300 text-xs text-emerald-900 mt-3"></div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="location" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-100 px-4 py-1.5 rounded-full">
+          Find Us in Kalaburagi
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          Clinic Location & Directions
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Conveniently located on Azadpur Road in Mecca Colony, Kalaburagi. Easily accessible by auto and car with street parking.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Google Map Embedded Card -->
+        <div class="lg:col-span-7 bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 flex flex-col">
+          <div class="p-4 bg-emerald-900 text-white flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-map-location-dot text-gold-400"></i>
+              <span class="text-xs font-bold">Ayesha Health Clinic Location</span>
+            </div>
+            <a href="https://maps.google.com/?q=8VR6%2BRQF,+Azadpur+Rd,+Mecca+Colony,+Kalaburagi,+Karnataka+585104" target="_blank" class="text-xs text-gold-300 hover:text-white underline">
+              Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Embed Google Maps iframe pointing to Azadpur Rd, Mecca Colony, Kalaburagi -->
+          <div class="relative w-full h-[360px] bg-slate-200">
+            <iframe 
+              title="Ayesha Health Clinic Kalaburagi Map"
+              class="w-full h-full border-0" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Azadpur+Rd,+Mecca+Colony,+Kalaburagi,+Karnataka+585104&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+
+          <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+            <span><strong>Plus Code:</strong> 8VR6+RQF Kalaburagi, Karnataka</span>
+            <span class="text-emerald-700 font-semibold"><i class="fa-solid fa-car text-xs mr-1"></i> Parking available</span>
+          </div>
+        </div>
+
+        <!-- Quick Access Directions & Contact Card -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-wider text-emerald-700">Reach the Clinic</span>
+              <h3 class="text-xl font-black text-slate-900 mt-1">Ayesha Health Clinic</h3>
+              <p class="text-xs text-slate-500">Medical Clinic & Hijama Specialist</p>
+            </div>
+
+            <div class="space-y-4 text-xs text-slate-700">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot text-emerald-700 text-sm mt-0.5"></i>
+                <div>
+                  <strong class="block text-slate-900">Address:</strong>
+                  8VR6+RQF, Azadpur Rd, Mecca Colony, Kalaburagi, Karnataka 585104
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone text-emerald-700 text-sm mt-0.5"></i>
+                <div>
+                  <strong class="block text-slate-900">Direct Phone:</strong>
+                  <a href="tel:08884839689" class="text-emerald-700 font-bold hover:underline">088848 39689</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-brands fa-whatsapp text-emerald-700 text-base mt-0.5"></i>
+                <div>
+                  <strong class="block text-slate-900">WhatsApp Inquiries:</strong>
+                  <span>+91 88848 39689</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-regular fa-clock text-emerald-700 text-sm mt-0.5"></i>
+                <div>
+                  <strong class="block text-slate-900">Daily Consultation Hours:</strong>
+                  <div>Morning: 09:30 AM to 01:30 PM</div>
+                  <div>Evening: 04:30 PM to 09:30 PM</div>
+                  <div class="text-slate-600 font-medium">Friday: 03:00 PM to 09:30 PM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 flex gap-3">
+            <a href="https://maps.google.com/?q=8VR6%2BRQF,+Azadpur+Rd,+Mecca+Colony,+Kalaburagi,+Karnataka+585104" target="_blank" class="flex-1 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-diamond-turn-right text-gold-400"></i> Get Directions
+            </a>
+            <a href="tel:08884839689" class="flex-1 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-phone"></i> Call Clinic
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div id="checklist-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeChecklistModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1" aria-label="Close modal">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-notes-medical"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Pre & Post Hijama Protocol</h3>
+        <p class="text-xs text-slate-500">Essential instructions for a safe and effective cupping session</p>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-700">
+        <div class="p-3.5 bg-emerald-50/70 rounded-2xl border border-emerald-100">
+          <h4 class="font-bold text-emerald-900 mb-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-clipboard-check text-emerald-600"></i> Before Hijama (Pre-Care):
+          </h4>
+          <ul class="list-disc pl-5 space-y-1 text-slate-600">
+            <li>Refrain from heavy food 2 to 3 hours prior to cupping (an empty stomach promotes better detoxification).</li>
+            <li>Drink plenty of water or water with pure honey.</li>
+            <li>Take a warm bath or shower before attending to relax peripheral vessels.</li>
+            <li>Inform the practitioner if you are pregnant, anemic, or on blood-thinning medication.</li>
+          </ul>
+        </div>
+
+        <div class="p-3.5 bg-amber-50/70 rounded-2xl border border-amber-200">
+          <h4 class="font-bold text-amber-900 mb-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-heart text-gold-600"></i> After Hijama (Post-Care):
+          </h4>
+          <ul class="list-disc pl-5 space-y-1 text-slate-600">
+            <li>Drink lukewarm water or warm honey tea to restore vital energy.</li>
+            <li>Avoid red meat, milk, and rich dairy products for 24 hours to prevent digestive strain.</li>
+            <li>Do not take a cold shower for 12 hours after wet cupping; keep points clean and moisturized with olive or black seed oil.</li>
+            <li>Rest and avoid vigorous gym workouts or intense cardio for 24 hours.</li>
+          </ul>
+        </div>
+      </div>
+
+      <button onclick="closeChecklistModal()" class="w-full mt-6 py-3 rounded-xl bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition">
+        I Understand & Agree
+      </button>
+    </div>
+  </div>
+
+  <div id="review-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeReviewModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1" aria-label="Close review modal">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-gold-600 flex items-center justify-center text-xl mx-auto mb-2">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Share Your Experience</h3>
+        <p class="text-xs text-slate-500">Your feedback helps fellow patients in Kalaburagi find authentic care.</p>
+      </div>
+
+      <form onsubmit="handleReviewSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Your Name</label>
+          <input type="text" id="review-name" required placeholder="e.g. Pasha" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Rating</label>
+          <select id="review-rating" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+            <option value="5">★★★★★ (5/5 Excellent)</option>
+            <option value="4">★★★★☆ (4/5 Very Good)</option>
+            <option value="3">★★★☆☆ (3/5 Good)</option>
+            <option value="2">★★☆☆☆ (2/5 Average)</option>
+            <option value="1">★☆☆☆☆ (1/5 Poor)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Feedback / Question</label>
+          <textarea id="review-comment" required rows="3" placeholder="Share your experience or ask about our timing, pricing, and services..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="bg-emerald-950 text-white border-t border-emerald-900/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-emerald-900">
+        
+        <!-- Clinic Info Col -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight text-white">Ayesha Health Clinic</span>
+          </div>
+          <p class="text-xs text-emerald-200/80 leading-relaxed">
+            Professional cupping therapy center dedicated to reviving the prophetic tradition (*Tibb-e-Nabawi*) through certified hygiene and compassionate patient care in Kalaburagi.
+          </p>
+          <div class="text-xs text-gold-300 font-semibold flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> 088848 39689
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="text-xs space-y-2 text-emerald-200/80">
+            <li><a href="#about" class="hover:text-gold-400 transition">What is Hijama</a></li>
+            <li><a href="#hadith" class="hover:text-gold-400 transition">Prophetic Hadith on Hijama</a></li>
+            <li><a href="#benefits" class="hover:text-gold-400 transition">Detox & Pain Relief Benefits</a></li>
+            <li><a href="#cures" class="hover:text-gold-400 transition">Cures for Chronic Ailments</a></li>
+            <li><a href="#sunnah-dates" class="hover:text-gold-400 transition">Sunnah Lunar Dates Calendar</a></li>
+            <li><a href="#reviews" class="hover:text-gold-400 transition">Patient Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Timings & Days Col -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Clinic Consultation Hours</h4>
+          <div class="text-xs space-y-2 text-emerald-200/80">
+            <div>
+              <span class="font-semibold text-white block">Morning Session:</span>
+              <span>09:30 AM to 01:30 PM</span>
+            </div>
+            <div>
+              <span class="font-semibold text-white block">Evening Session:</span>
+              <span>04:30 PM to 09:30 PM</span>
+            </div>
+            <div>
+              <span class="font-semibold text-white block">Friday Sessions:</span>
+              <span>03:00 PM to 09:30 PM (Post Jumu'ah)</span>
+            </div>
+            <div class="text-[11px] text-gold-300 pt-1">
+              * Dedicated female practitioner available upon request.
+            </div>
+          </div>
+        </div>
+
+        <!-- Address & Contact Col -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Visit Us</h4>
+          <p class="text-xs text-emerald-200/80 leading-relaxed">
+            8VR6+RQF, Azadpur Rd, Mecca Colony, Kalaburagi, Karnataka 585104
+          </p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a href="tel:08884839689" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs text-center transition">
+              Call: 088848 39689
+            </a>
+            <a href="https://maps.google.com/?q=8VR6%2BRQF,+Azadpur+Rd,+Mecca+Colony,+Kalaburagi,+Karnataka+585104" target="_blank" class="w-full py-2.5 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white font-bold text-xs text-center transition border border-emerald-700">
+              Open Navigation Map
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer & Copyright -->
+      <div class="pt-8 text-center sm:flex sm:justify-between sm:items-center text-xs text-emerald-300/60">
+        <p>© 2026 Ayesha Health Clinic, Kalaburagi. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">
+          Reviving the Sunnah of Shifa with medical excellence and sterility.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Set default date picker to tomorrow
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('appointment-date');
+      if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        dateInput.value = tomorrow.toISOString().split('T')[0];
+        dateInput.min = new Date().toISOString().split('T')[0];
+      }
+    });
+
+    // Mobile Navigation Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking any mobile link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Disease Category Filter
+    function filterDiseases(category) {
+      const cards = document.querySelectorAll('.disease-card');
+      const buttons = document.querySelectorAll('#disease-filters .filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-emerald-700', 'text-white', 'active');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+
+      // Highlight active button
+      event.target.classList.remove('bg-slate-100', 'text-slate-700');
+      event.target.classList.add('bg-emerald-700', 'text-white', 'active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Modal Control Functions
+    function openChecklistModal() {
+      document.getElementById('checklist-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeChecklistModal() {
+      document.getElementById('checklist-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function openReviewModal() {
+      document.getElementById('review-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReviewModal() {
+      document.getElementById('review-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Handle Appointment Submission
+    function handleAppointmentSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('patient-name').value;
+      const phone = document.getElementById('patient-phone').value;
+      const gender = document.getElementById('patient-gender').value;
+      const date = document.getElementById('appointment-date').value;
+      const slot = document.getElementById('appointment-slot').value;
+      const concern = document.getElementById('patient-concern').value;
+
+      const alertBox = document.getElementById('booking-alert');
+      alertBox.innerHTML = `
+        <div class="font-bold text-emerald-900 mb-1">
+          <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Appointment Request Received!
+        </div>
+        <div>
+          JazakAllah Khair, <strong>${name}</strong>. Your appointment request for <strong>${date} (${slot})</strong> targeting <em>${concern}</em> has been logged. Our staff at Ayesha Health Clinic will call you at <strong>${phone}</strong> shortly to confirm.
+        </div>
+      `;
+      alertBox.classList.remove('hidden');
+
+      // Reset form
+      document.getElementById('appointment-form').reset();
+    }
+
+    // WhatsApp Direct Booking Integration with clinic phone
+    function sendViaWhatsApp() {
+      const name = document.getElementById('patient-name').value || 'Patient';
+      const phone = document.getElementById('patient-phone').value || '';
+      const gender = document.getElementById('patient-gender').value;
+      const date = document.getElementById('appointment-date').value || 'Next Available Sunnah Day';
+      const slot = document.getElementById('appointment-slot').value;
+      const concern = document.getElementById('patient-concern').value;
+      const notes = document.getElementById('patient-notes').value;
+
+      const message = `Assalamu Alaikum Ayesha Health Clinic,\nI would like to book a Hijama cupping appointment:\n- Name: ${name}\n- Contact: ${phone}\n- Gender: ${gender}\n- Date: ${date}\n- Slot: ${slot}\n- Concern: ${concern}${notes ? '\n- Notes: ' + notes : ''}\n\nClinic location: Azadpur Rd, Mecca Colony, Kalaburagi.`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/918884839689?text=${encoded}`, '_blank');
+    }
+
+    // Handle Review Submission and append to review list
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('review-name').value;
+      const rating = parseInt(document.getElementById('review-rating').value, 10);
+      const comment = document.getElementById('review-comment').value;
+
+      let starsHtml = '';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          starsHtml += '<i class="fa-solid fa-star"></i>';
+        } else {
+          starsHtml += '<i class="fa-regular fa-star"></i>';
+        }
+      }
+
+      const reviewsContainer = document.getElementById('reviews-list');
+      const newCard = document.createElement('div');
+      newCard.className = 'bg-slate-50 rounded-3xl p-6 border border-emerald-300 shadow-sm flex flex-col justify-between';
+      newCard.innerHTML = `
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">
+                ${name.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">${name}</h4>
+                <div class="text-[11px] text-slate-500">Verified Patient Review</div>
+              </div>
+            </div>
+            <span class="text-[11px] text-emerald-700 font-semibold">Just now</span>
+          </div>
+
+          <div class="flex text-amber-400 text-xs mb-3">
+            ${starsHtml}
+          </div>
+
+          <p class="text-xs text-slate-700 font-medium italic mb-4">
+            "${comment}"
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-3.5 border border-emerald-100 text-xs text-slate-600 space-y-1">
+          <div class="flex items-center gap-1.5 text-emerald-800 font-bold text-[11px]">
+            <i class="fa-solid fa-reply"></i>
+            <span>Response from Ayesha Health Clinic:</span>
+          </div>
+          <p class="text-[11px]">
+            JazakAllah Khair ${name} for your review. We are honored to serve you at Mecca Colony, Kalaburagi.
+          </p>
+        </div>
+      `;
+
+      reviewsContainer.prepend(newCard);
+      closeReviewModal();
+      document.getElementById('review-name').value = '';
+      document.getElementById('review-comment').value = '';
+    }
+  </script>
+</body>
+</html>
