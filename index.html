@@ -180,10 +180,11 @@
   <section id="home" class="relative text-white pt-10 sm:pt-16 pb-16 sm:pb-24">
     <!-- Full-Cover Background Image -->
     <!-- Full-Cover Background Image -->
+<!-- WITH THIS -->
 <img 
   src="doctor.jpeg" 
   alt="Ayesha Health Clinic Hijama Therapy" 
-  class="absolute inset-0 w-full h-full object-contain sm:object-cover object-top pointer-events-none z-0"
+  class="absolute inset-x-0 top-0 w-full h-[220%] sm:h-[180%] lg:h-[160%] object-cover object-top pointer-events-none z-0 opacity-20"
 >
     <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-emerald-950/90 pointer-events-none"></div>
     <div class="absolute inset-0 opacity-10 bg-arabesque pointer-events-none"></div>
@@ -294,8 +295,9 @@
   </section>
 
   <!-- Prophetic Hadith Section -->
-<section id="hadith" class="py-14 sm:py-20 bg-emerald-950/30 backdrop-blur-md text-white relative overflow-hidden z-10 border-t border-white/10">
-  
+<!-- WITH THIS -->
+<section id="hadith" class="py-14 sm:py-20 bg-emerald-950/50 backdrop-blur-md text-white relative z-10 border-t border-white/10">
+
   <!-- Subtle ambient glow blurs behind the glass -->
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-600/20 rounded-none blur-3xl pointer-events-none"></div>
   <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-gold-500/10 rounded-none blur-3xl pointer-events-none"></div>
@@ -521,7 +523,6 @@
     <style>
       .flip-container {
         perspective: 1200px;
-        min-height: 420px;
       }
       .flip-card-inner {
         position: relative;
@@ -530,8 +531,8 @@
         transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
       }
-      .flip-container:hover .flip-card-inner,
-      .flip-container.flipped .flip-card-inner {
+      /* Flips strictly on hover, returns to 0deg immediately when mouse leaves */
+      .flip-container:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
       .flip-front, .flip-back {
@@ -545,18 +546,13 @@
       .flip-back {
         transform: rotateY(180deg);
       }
-      @media (max-width: 380px) {
-        .flip-container {
-          height: 460px;
-        }
-      }
     </style>
 
     <!-- Flip Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="disease-cards-container">
       
       <!-- Condition 1: Sciatica -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="musculoskeletal" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
@@ -614,7 +610,7 @@
       </div>
 
       <!-- Condition 2: Migraines -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="neurological" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
@@ -672,7 +668,7 @@
       </div>
 
       <!-- Condition 3: Cervical Spondylosis -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="musculoskeletal" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
@@ -730,7 +726,7 @@
       </div>
 
       <!-- Condition 4: Hypertension -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="metabolic" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
@@ -788,7 +784,7 @@
       </div>
 
       <!-- Condition 5: Gout & Uric Acid -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="metabolic" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
@@ -846,7 +842,7 @@
       </div>
 
       <!-- Condition 6: Skin & Asthma -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="skin" onclick="this.classList.toggle('flipped')">
+      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
         <div class="flip-card-inner">
           
           <!-- FRONT FACE -->
