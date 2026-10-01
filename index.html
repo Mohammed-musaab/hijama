@@ -80,6 +80,51 @@
         display: none;
       }
     }
+    /* 3D Staggered Roll-In Flip Keyframes */
+/* 3D Staggered Roll-In Flip Keyframes */
+@keyframes flip3dIn {
+  0% {
+    opacity: 0;
+    transform: perspective(800px) rotateX(-90deg) translateY(20px);
+  }
+  60% {
+    transform: perspective(800px) rotateX(18deg) translateY(-4px);
+  }
+  80% {
+    transform: perspective(800px) rotateX(-8deg) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) translateY(0);
+  }
+}
+
+.flip-word {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  animation: flip3dIn 0.85s cubic-bezier(0.2, 0.85, 0.4, 1.2) forwards;
+  opacity: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Gradient class applied directly to words */
+.flip-gold-word {
+  background: linear-gradient(to right, #facc15, #fde68a, #a7f3d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-hero {
+  animation: floatGentle 5s ease-in-out infinite 1.4s;
+}
   </style>
 </head>
 
@@ -194,20 +239,38 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Hero Left Column -->
-        <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+        <div class="lg:col-span-12 space-y-4 sm:space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-none bg-white/10 backdrop-blur-sm border border-emerald-400/20 text-gold-300 text-[11px] sm:text-xs font-semibold">
-            <span>Certified Hijama Specialists in Kalaburagi</span>
-            <span class="text-white/80 hidden sm:inline">Mecca Colony</span>
-          </div>
+<!-- Dual-Tone Shield Ribbon Badge -->
+<div class="inline-flex items-stretch shadow-2xl border-dash border-emerald-500/40 rounded-none overflow-hidden backdrop-blur-md">
+  <!-- Left Gold Compartment -->
+  <div class="bg-gradient-to-r from-gold-500 to-amber-500 text-emerald-950 px-3.5 py-1.5 sm:px-4 sm:py-2 flex items-center gap-1.5 font-extrabold text-[11px] sm:text-xs uppercase tracking-wider m-12">
+    <i class="fa-solid fa-award text-xs sm:text-sm"></i>
+    <span>Certified Specialists</span>
+  </div>
+  <!-- Right Dark Glass Tail -->
+  
+</div>
 
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight">
-            Revive the Sunnah of <br class="hidden sm:inline" />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-200 to-emerald-200 ">
-              Natural Healing & Detox
-            </span>
-          </h1>
+<h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight animate-float-hero !mt-6 sm:!mt-8">
+  <!-- Line 1: Revive the Sunnah of -->
+  <span class="inline-block">
+    <span class="flip-word" style="animation-delay: 0.1s;">Revive</span>
+    <span class="flip-word" style="animation-delay: 0.22s;">the</span>
+    <span class="flip-word" style="animation-delay: 0.34s;">Sunnah</span>
+    <span class="flip-word" style="animation-delay: 0.46s;">of</span>
+  </span>
 
+  <br class="hidden sm:inline" />
+
+  <!-- Line 2: Natural Healing & Detox -->
+  <span class="inline-block">
+    <span class="flip-word flip-gold-word" style="animation-delay: 0.62s;">Natural</span>
+    <span class="flip-word flip-gold-word" style="animation-delay: 0.74s;">Healing</span>
+    <span class="flip-word flip-gold-word" style="animation-delay: 0.86s;">&amp;</span>
+    <span class="flip-word flip-gold-word" style="animation-delay: 0.98s;">Detox</span>
+  </span>
+</h1>
           <!-- Hero Action Buttons (Clean responsive margin) -->
 <div class="pt-4 sm:pt-6 flex justify-center lg:justify-start">
   <a href="#appointment" class="w-full sm:w-auto px-8 py-3.5 rounded-none bg-emerald-800/90 hover:bg-emerald-700 border border-emerald-600/40 text-white font-semibold text-sm transition flex items-center justify-center gap-2.5 shadow-lg">
@@ -238,66 +301,68 @@
         </div>
 
         <!-- Hero Right Column Feature Card -->
-        <div class="lg:col-span-5">
-          <div class="rounded-none">
-            
-            <div class="border-b border-white/10 pb-4 mb-4 text-center">
+<!-- WITH THIS (Dark border linings applied) -->
+      <div class="lg:col-span-12 w-full lg:max-w-2xl lg:mx-auto">
+  <!-- Outer Wrapper with Background Image -->
+  <div class="relative rounded-none overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('doctor.jpeg')] shadow-2xl">
+    
+    <!-- Your Exact Glassmorphic Card (Preserving all your borders & double lines) -->
+    <div class="rounded-none p-5 sm:p-6 bg-emerald-950/80 backdrop-blur-md border-8 border-double border-emerald-950">
+      
+      <!-- Clinic Title Header -->
+      <div class="border-b-4 border-double border-emerald-900 pb-4 mb-4 text-center">
+        <h2 class="text-lg sm:text-xl font-bold text-white mt-1">Ayesha Health Clinic</h2>
+        <p class="text-xs text-emerald-200/80">Azadpur Rd, Mecca Colony, Kalaburagi</p>
+      </div>
 
-              <h2 class="text-lg sm:text-xl font-bold text-white mt-1">Ayesha Health Clinic</h2>
-              <p class="text-xs text-emerald-200/80">Azadpur Rd, Mecca Colony, Kalaburagi</p>
-            </div>
-
-            <!-- Timings Box -->
-            <div class="bg-white/5 rounded-none p-3.5 sm:p-4 border border-white/10 mb-4 backdrop-blur-sm">
-              <div class="flex items-center justify-between text-xs font-bold text-emerald-300 mb-2">
-                <span class="flex items-center gap-1.5">
-                  <i class="fa-regular fa-clock"></i> Clinic Timings &amp; Schedule
-                </span>
-                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-none border border-white/30">Open Daily</span>
-              </div>
-              <div class="space-y-1 text-xs text-emerald-100/90">
-                <div class="flex justify-between border-b border-white/5 pb-1">
-                  <span>Morning Session:</span>
-                  <span class="font-semibold text-white">09:30 AM – 01:30 PM</span>
-                </div>
-                <div class="flex justify-between border-b border-white/5 pb-1">
-                  <span>Evening Session:</span>
-                  <span class="font-semibold text-white">04:30 PM – 09:30 PM</span>
-                </div>
-                <div class="flex justify-between text-gold-300 font-medium pt-0.5">
-                  <span>Friday Timings:</span>
-                  <span class="font-bold">After Jumu'ah (03:00 PM – 09:30 PM)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sunnah Quote Box -->
-            <div class="rounded-none p-3.5 sm:p-4 bg-amber-500/10 border border-amber-400/20 text-amber-200 text-xs space-y-1.5 mb-5 backdrop-blur-sm">
-              <div class="font-bold flex items-center gap-1.5 text-gold-400">
-                <span>Tibb-e-Nabawi Healing Principle</span>
-              </div>
-              <p class="italic text-emerald-100/90 leading-relaxed font-arabic text-sm sm:text-base">
-                "Healing is in three things: A gulp of honey, cupping (Hijama), and cauterization..."
-              </p>
-              <div class="text-[11px] text-gold-400 font-semibold">— Sahih al-Bukhari 5684</div>
-            </div>
-
-            <a href="#appointment" class="w-full block text-center py-3 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs sm:text-sm shadow-lg shadow-gold-500/20 transition transform hover:-translate-y-0.5">
-              Reserve Today's Slot
-            </a>
-            
-            <p class="text-center text-[10px] sm:text-[11px] text-emerald-200/70 mt-2.5 flex items-center justify-center gap-1">
-            </p>
+      <!-- Timings Box (Dark border lining) -->
+      <div class="bg-black/40 rounded-none p-3.5 sm:p-4 border-8 border-double border-emerald-950 mb-4 backdrop-blur-sm">
+        <div class="flex items-center justify-between text-xs font-bold text-emerald-300 mb-2">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-regular fa-clock"></i> Clinic Timings &amp; Schedule
+          </span>
+          <span class="text-[10px] bg-emerald-900/80 text-emerald-300 px-2 py-0.5 rounded-none border border-emerald-950">Open Daily</span>
+        </div>
+        <div class="space-y-1 text-xs text-emerald-100/90">
+          <div class="flex justify-between border-b border-emerald-900/60 pb-1">
+            <span>Morning Session:</span>
+            <span class="font-semibold text-white">09:30 AM – 01:30 PM</span>
+          </div>
+          <div class="flex justify-between border-b border-emerald-900/60 pb-1">
+            <span>Evening Session:</span>
+            <span class="font-semibold text-white">04:30 PM – 09:30 PM</span>
+          </div>
+          <div class="flex justify-between text-gold-300 font-medium pt-0.5">
+            <span>Friday Timings:</span>
+            <span class="font-bold">After Jumu'ah (03:00 PM – 09:30 PM)</span>
           </div>
         </div>
-
       </div>
+
+      <!-- Sunnah Quote Box (Dark border lining) -->
+      <div class="rounded-none p-3.5 sm:p-4 bg-black/40 border-2 border-emerald-900 text-amber-200 text-xs space-y-1.5 mb-5 backdrop-blur-sm">
+        <div class="font-bold flex items-center gap-1.5 text-gold-400">
+          <span>Tibb-e-Nabawi Healing Principle</span>
+        </div>
+        <p class="italic text-emerald-100/90 leading-relaxed font-arabic text-sm sm:text-base">
+          "Healing is in three things: A gulp of honey, cupping (Hijama), and cauterization..."
+        </p>
+        <div class="text-[11px] text-gold-400 font-semibold">— Sahih al-Bukhari 5684</div>
+      </div>
+
+      <!-- CTA Button -->
+      
+      
+      <p class="text-center text-[10px] sm:text-[11px] text-emerald-200/70 mt-2.5 flex items-center justify-center gap-1">
+      </p>
     </div>
+  </div>
+</div>
   </section>
 
   <!-- Prophetic Hadith Section -->
 <!-- WITH THIS -->
-<section id="hadith" class="py-14 sm:py-20 bg-emerald-950/50 backdrop-blur-md text-white relative z-10 border-t border-white/10">
+<section id="hadith" class="py-14 sm:py-20 bg-emerald-950/50 backdrop-blur-md text-white relative z-10 border-t border-white/10 overflow-x-hidden">
 
   <!-- Subtle ambient glow blurs behind the glass -->
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-600/20 rounded-none blur-3xl pointer-events-none"></div>
@@ -416,9 +481,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2 sm:space-y-3">
-        <span class="text-emerald-700 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest bg-emerald-100 px-3.5 py-1 rounded-none">
-          Evidence-Based Holistic Therapy
-        </span>
+       
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900">
           How Hijama Works: Physiological & Health Benefits
         </h2>
@@ -430,7 +493,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
         
         <div class="bg-white rounded-none p-6 shadow-sm hover:shadow-xl transition border border-slate-200/80 group">
-          <div class="w-12 h-12 rounded-none bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+          <div class="w-12 h-12 rounded-none bg-white-50 text-emerald-700 flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
             <i class="fa-solid fa-droplet"></i>
           </div>
           <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">Deep Blood Detoxification</h3>
@@ -494,416 +557,383 @@
     </div>
   </section>
 
-  <!-- Targeted Cures Section -->
-  <section id="cures" class="py-14 sm:py-20 bg-white border-t border-slate-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
-      <span class="inline-block text-emerald-800 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest bg-emerald-100 px-3.5 py-1 rounded-none border border-emerald-200">
-        Targeted Clinical Protocols
-      </span>
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900">
-        Targeted Cures for Specific Diseases
-      </h2>
-      <p class="text-slate-600 text-xs sm:text-sm">
-        Hover or tap each card to flip and reveal anatomical Sunnah trigger points and procedural protocols.
-      </p>
-    </div>
-
-    <!-- Disease Filter Buttons -->
-    <div class="flex flex-wrap justify-center gap-1.5 sm:gap-2.5 mb-8 sm:mb-10" id="disease-filters">
-      <button onclick="filterDiseases('all')" class="filter-btn active px-3.5 py-1.5 rounded-none text-xs sm:text-sm font-bold bg-emerald-700 text-white transition">All Conditions</button>
-      <button onclick="filterDiseases('musculoskeletal')" class="filter-btn px-3.5 py-1.5 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Joints &amp; Spine</button>
-      <button onclick="filterDiseases('neurological')" class="filter-btn px-3.5 py-1.5 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Neurology &amp; Head</button>
-      <button onclick="filterDiseases('metabolic')" class="filter-btn px-3.5 py-1.5 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Metabolic &amp; Blood</button>
-      <button onclick="filterDiseases('skin')" class="filter-btn px-3.5 py-1.5 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">Skin &amp; Respiratory</button>
-    </div>
-
     <!-- 3D Flip Card Styles -->
-    <style>
-      .flip-container {
-        perspective: 1200px;
-      }
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
-        transform-style: preserve-3d;
-      }
-      /* Flips strictly on hover, returns to 0deg immediately when mouse leaves */
-      .flip-container:hover .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-      .flip-front, .flip-back {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-      }
-      .flip-back {
-        transform: rotateY(180deg);
-      }
-    </style>
-
-    <!-- Flip Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="disease-cards-container">
+    <!-- Targeted Cures Section -->
+  <section id="cures" class="py-14 sm:py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Condition 1: Sciatica -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="joints.jpeg" alt="Sciatica Hijama" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
-              </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-none">Musculoskeletal</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, 11, 12</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Sciatica &amp; Lumbar Slip Disc</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Decompresses sciatic nerve impingement, relaxes piriformis spasms, and clears micro-vascular congestion.
-              </p>
-            </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> Lumbar Vertebrae L4-S1</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
-            </div>
-          </div>
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2 sm:space-y-3">
 
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Clinical Point Protocol</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Anatomical Trigger Mapping</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Point 1 &amp; 55 (Al-Kahil):</strong> Upper dorsal vertebrae hub connecting spinal nervous pathways.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Point 11 &amp; 12 (Al-Warik):</strong> Hip and sacral bilateral cups to relieve radiating leg numbness.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Sessions recommended: 2-3 cycles aligned with Sunnah lunar intervals.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Sciatica Protocol
-            </a>
-          </div>
-
-        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900">
+          Targeted Cures for Specific Diseases
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm">
+         
+        </p>
       </div>
 
-      <!-- Condition 2: Migraines -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="doctor.jpeg" alt="Migraines Hijama" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
-              </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-purple-800 bg-purple-100 px-2.5 py-0.5 rounded-none">Neurological</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, 2, 3</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Chronic Migraines &amp; Vertigo</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Relieves throbbing headaches, cranial heaviness, vertigo, and sinus pressure by targeting occipital blood stagnation.
-              </p>
-            </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> Occipital &amp; Lateral Neck</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
-            </div>
-          </div>
-
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Cranial Protocol</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Authentic Sunnah Locations</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Al-Akhda'ain (Points 2 &amp; 3):</strong> Posterior lateral neck veins normalizing cerebral micro-pressure.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Al-Yafookh (Vertex):</strong> Vertex crown cupping performed dry or wet without shaving if suitable.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Often yields immediate lightness and pressure relief within 60 minutes.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Migraine Protocol
-            </a>
-          </div>
-
-        </div>
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4" id="disease-filters">
+        <button onclick="filterDiseases('all', this)" class="filter-btn active px-4 py-2 rounded-none text-xs sm:text-sm font-bold bg-emerald-700 text-white shadow-sm transition">
+          All Conditions
+        </button>
+        <button onclick="filterDiseases('musculoskeletal', this)" class="filter-btn px-4 py-2 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">
+          <i class="fa-solid fa-bone mr-1.5 text-black-600"></i> Joints &amp; Spine
+        </button>
+        <button onclick="filterDiseases('neurological', this)" class="filter-btn px-4 py-2 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">
+          <i class="fa-solid fa-brain mr-1.5 text-black-600"></i> Neurology &amp; Head
+        </button>
+        <button onclick="filterDiseases('metabolic', this)" class="filter-btn px-4 py-2 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">
+          <i class="fa-solid fa-heart-pulse mr-1.5 text-black-600"></i> Metabolic &amp; Blood
+        </button>
+        <button onclick="filterDiseases('skin', this)" class="filter-btn px-4 py-2 rounded-none text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 transition">
+          <i class="fa-solid fa-lungs mr-1.5 text-black-600"></i> Skin &amp; Respiratory
+        </button>
       </div>
 
-      <!-- Condition 3: Cervical Spondylosis -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="joints.jpeg" alt="Cervical Spondylosis" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
-              </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-none">Musculoskeletal</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, Cervical</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Cervical Spondylosis &amp; Stiff Neck</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Alleviates cervical stiffness, trapezius tightness from desk postures, and finger numbness.
-              </p>
-            </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> C3-C7 Cervical &amp; Trapezius</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
-            </div>
-          </div>
-
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Cervical Protocol</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Fascial Decompression</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Point 1 (Al-Kahil):</strong> Base of neck vertebra prominentia (C7) to unlock neuromuscular tone.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Trapezius Bilaterals:</strong> Releasing compressed myofascial trigger knots across shoulder blades.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Pairs exceptionally well with moving black seed oil cupping.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Cervical Treatment
-            </a>
-          </div>
-
-        </div>
+      <!-- Indicator -->
+      <div class="text-center mb-8">
+        <span id="active-filter-indicator" class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 py-1.5 px-4 inline-block rounded-none border border-emerald-200">
+          Showing: All Conditions
+        </span>
       </div>
 
-      <!-- Condition 4: Hypertension -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="wetcupping.jpeg" alt="Hypertension Hijama" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
+      <!-- 3D Flip Card Styles -->
+      <style>
+        .flip-container {
+          perspective: 1200px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transform-style: preserve-3d;
+        }
+        .flip-container.flipped .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        .flip-front, .flip-back {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        .flip-back {
+          transform: rotateY(180deg);
+        }
+      </style>
+
+      <!-- Flip Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="disease-cards-container">
+        
+        <!-- Condition 1: Sciatica (Musculoskeletal) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="musculoskeletal" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="joints.jpeg" alt="Sciatica Hijama" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-emerald-800 bg-white px-2.5 py-0.5 rounded-none">Musculoskeletal</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Sciatica &amp; Lumbar Slip Disc</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Decompresses sciatic nerve impingement, relaxes piriformis spasms, and clears micro-vascular congestion.
+                </p>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-none">Metabolic</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, 6, 48</span>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> Lumbar Vertebrae L4-S1</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Hypertension &amp; High Lipids</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Diminishes peripheral vascular resistance, restores arterial compliance, and clears sluggish cellular sludge.
-              </p>
             </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> Interscapular &amp; Hepatic Reflex</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Clinical Point Protocol</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Anatomical Trigger Mapping</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Point 1 &amp; 55 (Al-Kahil):</strong> Upper dorsal vertebrae hub connecting spinal pathways.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Point 11 &amp; 12 (Al-Warik):</strong> Hip and sacral bilateral cups to relieve radiating leg pain.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Sciatica Protocol
+              </a>
             </div>
           </div>
-
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Vascular Protocol</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Vascular Decompression Points</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Points 1 &amp; 55:</strong> Stimulates nitric oxide vasodilators and down-regulates sympathetic surge.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Points 6 &amp; 48:</strong> Hepatic and gallbladder reflex coordinates aiding lipid clearance.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Best administered on the waning lunar 17th, 19th, or 21st dates.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Vascular Session
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Condition 5: Gout & Uric Acid -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="drycupping.jpeg" alt="Gout Hijama" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
+        <!-- Condition 2: Migraines (Neurological) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="neurological" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="doctor.jpeg" alt="Migraines Hijama" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-purple-800 bg-white-100 px-2.5 py-0.5 rounded-none">Neurological</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Chronic Migraines &amp; Vertigo</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Relieves throbbing headaches, cranial heaviness, vertigo, and sinus pressure by targeting occipital blood stagnation.
+                </p>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-none">Metabolic</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, 28, 29</span>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> Occipital &amp; Lateral Neck</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Gout &amp; High Uric Acid</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Purges crystallized monosodium urate deposits and relieves throbbing sensations in toes and heels.
-              </p>
             </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> Ankle Extremities &amp; Kidneys</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Cranial Protocol</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Authentic Sunnah Locations</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Al-Akhda'ain (Points 2 &amp; 3):</strong> Posterior lateral neck veins normalizing cerebral pressure.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Al-Yafookh (Vertex):</strong> Vertex crown cupping to soothe persistent tension.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Migraine Protocol
+              </a>
             </div>
           </div>
-
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Metabolic Drainage</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Extremity Purging Points</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Points 28, 29, 30:</strong> Dorsal foot and lower extremity lymphatic drainage portals.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Renal Balance:</strong> Lumbar renal points assisting filtration of excess blood uric salts.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Pairs with in-clinic hydration guidance and barley talbina diet.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Gout Protocol
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Condition 6: Skin & Asthma -->
-      <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="...">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
-                <img src="wetcupping.jpeg" alt="Skin and Asthma Hijama" class="w-full h-full object-cover">
-                <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
-                  <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Flip for Points
-                </span>
+        <!-- Condition 3: Cervical (Musculoskeletal) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="musculoskeletal" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="joints.jpeg" alt="Cervical Spondylosis" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-emerald-800 bg-white px-2.5 py-0.5 rounded-none">Musculoskeletal</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Cervical Spondylosis &amp; Stiff Neck</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Alleviates cervical stiffness, trapezius tightness from desk postures, and finger numbness.
+                </p>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-blue-800 bg-blue-100 px-2.5 py-0.5 rounded-none">Skin &amp; Lungs</span>
-                <span class="text-xs text-slate-500 font-semibold">Points: 1, 55, 4, 5</span>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> C3-C7 Cervical &amp; Trapezius</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">Eczema, Acne &amp; Asthma</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Cleanses histamine-loaded blood, improves dermic oxygenation, and dilates bronchial passages.
-              </p>
             </div>
-            <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
-              <span><strong>Key Zone:</strong> Thoracic Pulmonary Hubs</span>
-              <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Cervical Protocol</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Fascial Decompression</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Point 1 (Al-Kahil):</strong> Base of neck vertebra prominentia (C7) to unlock neuromuscular tone.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Trapezius Bilaterals:</strong> Releasing compressed myofascial trigger knots across shoulder blades.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Cervical Treatment
+              </a>
             </div>
           </div>
-
-          <!-- BACK FACE -->
-          <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Immune Modulation</span>
-                <i class="fa-solid fa-circle-check text-emerald-400"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">Thoracic Bronchial Targets</h4>
-              <ul class="text-xs text-emerald-100/90 space-y-2">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Points 4 &amp; 5:</strong> Bilateral thoracic lung fields relaxing respiratory bronchial spasm.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
-                  <span><strong>Point 49:</strong> Facial and dermal immunity stimulant to calm cystic acne eruptions.</span>
-                </li>
-              </ul>
-              <div class="p-2.5 rounded-none bg-white/5 border border-white/10 text-[11px] text-amber-200 italic">
-                Noticeable reduction in systemic allergic inflammation and hives.
-              </div>
-            </div>
-            <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
-              Book Allergy / Asthma Care
-            </a>
-          </div>
-
         </div>
+
+        <!-- Condition 4: Hypertension (Metabolic) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="metabolic" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="wetcupping.jpeg" alt="Hypertension Hijama" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-amber-800 bg-white px-2.5 py-0.5 rounded-none">Metabolic</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Hypertension &amp; High Lipids</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Diminishes peripheral vascular resistance, restores arterial compliance, and clears sluggish cellular sludge.
+                </p>
+              </div>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> Interscapular &amp; Hepatic Reflex</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+              </div>
+            </div>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Vascular Protocol</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Vascular Decompression</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Points 1 &amp; 55:</strong> Stimulates nitric oxide vasodilators and down-regulates sympathetic surge.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Points 6 &amp; 48:</strong> Hepatic and gallbladder reflex coordinates aiding lipid clearance.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Vascular Session
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Condition 5: Gout (Metabolic) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="metabolic" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="drycupping.jpeg" alt="Gout Hijama" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-amber-800 bg-white px-2.5 py-0.5 rounded-none">Metabolic</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Gout &amp; High Uric Acid</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Purges crystallized monosodium urate deposits and relieves throbbing sensations in toes and heels.
+                </p>
+              </div>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> Ankle Extremities &amp; Kidneys</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+              </div>
+            </div>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Metabolic Drainage</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Extremity Purging Points</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Points 28, 29, 30:</strong> Dorsal foot and lower extremity lymphatic drainage portals.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Renal Balance:</strong> Lumbar renal points assisting filtration of excess blood uric salts.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Gout Protocol
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Condition 6: Skin & Asthma (Skin) -->
+        <div class="disease-card flip-container h-[420px] w-full cursor-pointer select-none" data-category="skin" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-front bg-slate-50 border border-slate-200 rounded-none p-5 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="w-full h-44 rounded-none overflow-hidden mb-3 bg-slate-100 relative">
+                  <img src="wetcupping.jpeg" alt="Skin and Asthma Hijama" class="w-full h-full object-cover">
+                  <span class="absolute bottom-2.5 right-2.5 text-[10px] bg-slate-900/80 text-white font-semibold px-2 py-0.5 rounded-none flex items-center gap-1 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-rotate text-gold-400"></i> Click to see more about this condition  
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-blue-800 bg-white px-2.5 py-0.5 rounded-none">Skin &amp; Lungs</span>
+                  <span class="text-xs text-slate-500 font-semibold"></span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Eczema, Acne &amp; Asthma</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Cleanses histamine-loaded blood, improves dermic oxygenation, and dilates bronchial passages.
+                </p>
+              </div>
+              <div class="text-[11px] bg-white p-2.5 rounded-none border border-slate-200 text-slate-700 flex items-center justify-between">
+                <span><strong>Key Zone:</strong> Thoracic Pulmonary Hubs</span>
+                <i class="fa-solid fa-arrow-turn-right text-emerald-600 text-xs"></i>
+              </div>
+            </div>
+            <div class="flip-back bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-none p-6 flex flex-col justify-between shadow-xl border border-gold-500/30">
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Immune Modulation</span>
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">Thoracic Bronchial Targets</h4>
+                <ul class="text-xs text-emerald-100/90 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Points 4 &amp; 5:</strong> Bilateral thoracic lung fields relaxing respiratory bronchial spasm.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-feather text-gold-400 mt-0.5"></i>
+                    <span><strong>Point 49:</strong> Facial and dermal immunity stimulant to calm cystic acne eruptions.</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="#appointment" class="w-full text-center py-2.5 rounded-none bg-gold-500 hover:bg-gold-400 text-emerald-950 font-bold text-xs uppercase tracking-wider transition">
+                Book Allergy Care
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
   <!-- Sunnah Dates Section -->
   <section id="sunnah-dates" class="py-14 sm:py-20 bg-emerald-950 text-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1130,15 +1160,15 @@
         
         <div class="lg:col-span-6 flex flex-col justify-center text-center lg:text-left space-y-2 sm:space-y-3">
           <div>
-            <span class="text-emerald-700 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest bg-emerald-100 px-3.5 py-1 rounded-none border border-emerald-200 inline-block">
+            <span class="text-emerald-700 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest bg-white-100 px-3.5 py-1 rounded-none border-double border-black-200 inline-block">
               Unani &amp; Tibb-e-Nabawi Remedies
             </span>
           </div>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-            Specialized Herbal Formulations &amp; Tonics
+            Special Herbal Formulations &amp; Tonics
           </h2>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Pure, naturally prepared classical Unani compounds and restorative tonics dispensed directly at Ayesha Health Clinic under expert supervision.
+            Pure, naturally prepared Unani medicines and restorative tonics at Ayesha Health Clinic under expert supervision.
           </p>
         </div>
 
@@ -1934,25 +1964,36 @@
     }
 
     // Disease Category Filter
-    function filterDiseases(category) {
+// Enhanced Disease Category Filter linked directly to card attributes and title
+    function filterDiseases(category, btnElement) {
       const cards = document.querySelectorAll('.disease-card');
       const buttons = document.querySelectorAll('#disease-filters .filter-btn');
+      const indicator = document.getElementById('active-filter-indicator');
 
+      // Update button active states
       buttons.forEach(btn => {
-        btn.classList.remove('bg-emerald-700', 'text-white', 'active');
-        btn.classList.add('bg-slate-100', 'text-slate-700');
+        btn.classList.remove('bg-emerald-700', 'text-white', 'font-bold');
+        btn.classList.add('bg-slate-100', 'text-slate-700', 'font-semibold');
       });
 
-      if (event && event.target) {
-        event.target.classList.remove('bg-slate-100', 'text-slate-700');
-        event.target.classList.add('bg-emerald-700', 'text-white', 'active');
+      if (btnElement) {
+        btnElement.classList.remove('bg-slate-100', 'text-slate-700', 'font-semibold');
+        btnElement.classList.add('bg-emerald-700', 'text-white', 'font-bold');
+        
+        // Update the active title text
+        if (indicator) {
+          indicator.textContent = `Showing: ${btnElement.textContent.trim()}`;
+        }
       }
 
+      // Show/Hide matching cards
       cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
+          card.classList.remove('flipped'); // Reset card flip when hidden
         }
       });
     }
