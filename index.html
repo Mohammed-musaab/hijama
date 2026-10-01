@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -67,6 +67,13 @@
     .custom-scrollbar::-webkit-scrollbar-thumb {
       background-color: #059669;
       border-radius: 0px;
+    }
+    .goog-te-banner-frame.skiptranslate,
+    iframe.VIpgJd-ZVi9od-ORHb-OEVmcd {
+      display: none !important;
+    }
+    body {
+      top: 0 !important;
     }
     #desktop-navigation {
       display: none;
@@ -139,7 +146,7 @@
         </span>
         <span class="hidden md:inline text-emerald-200/80">| Authentic Prophetic Medicine & Wet/Dry Cupping Therapy</span>
       </div>
-      <div class="flex items-center space-x-3 text-[11px] sm:text-xs">
+      <div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-3 gap-y-1 text-[11px] sm:text-xs">
         <a href="tel:08884839689" class="hover:text-gold-400 transition flex items-center gap-1 font-medium">
           <i class="fa-solid fa-phone text-emerald-400"></i> 088848 39689
         </a>
@@ -147,6 +154,12 @@
         <span class="flex items-center gap-1 text-slate-300">
           <i class="fa-solid fa-location-dot text-emerald-400"></i> Mecca Colony, Kalaburagi
         </span>
+        <label for="language-switcher" class="sr-only">Choose language</label>
+        <select id="language-switcher" class="bg-emerald-900 border border-emerald-700 text-emerald-100 text-[11px] px-2 py-1 rounded-none focus:outline-none focus:ring-1 focus:ring-gold-400" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="ur">اردو</option>
+        </select>
       </div>
     </div>
   </div>
@@ -593,11 +606,7 @@
       </div>
 
       <!-- Indicator -->
-      <div class="text-center mb-8">
-        <span id="active-filter-indicator" class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 py-1.5 px-4 inline-block rounded-none border border-emerald-200">
-          Showing: All Conditions
-        </span>
-      </div>
+     
 
       <!-- 3D Flip Card Styles -->
       <style>
@@ -2116,5 +2125,53 @@
       document.getElementById('review-comment').value = '';
     }
   </script>
+  <div id="google_translate_element" class="sr-only" aria-hidden="true"></div>
+  <script>
+    function clearGoogleTranslateCookie() {
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    }
+
+    if (document.cookie.split(';').some(cookie => cookie.trim().startsWith('googtrans='))) {
+      clearGoogleTranslateCookie();
+    }
+
+    let queuedTranslationLanguage = 'en';
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'kn,ur',
+        autoDisplay: false
+      }, 'google_translate_element');
+
+      if (queuedTranslationLanguage !== 'en') {
+        window.setTimeout(() => applySiteLanguage(queuedTranslationLanguage), 0);
+      }
+    }
+
+    function applySiteLanguage(language) {
+      queuedTranslationLanguage = language;
+
+      if (language === 'en' && document.cookie.split(';').some(cookie => cookie.trim().startsWith('googtrans='))) {
+        clearGoogleTranslateCookie();
+        window.location.reload();
+        return;
+      }
+
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ur' ? 'rtl' : 'ltr';
+
+      const translator = document.querySelector('.goog-te-combo');
+      if (!translator) return;
+
+      translator.value = language === 'en' ? '' : language;
+      translator.dispatchEvent(new Event('change'));
+    }
+
+    document.getElementById('language-switcher').addEventListener('change', event => {
+      applySiteLanguage(event.target.value);
+    });
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
