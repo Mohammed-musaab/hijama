@@ -270,25 +270,16 @@
 }
 /* --- 3D Animated Hadith Cards --- */
 /* Dark Neumorphic Card Style */
-.hadith-neumorphic-card {
-  width: 190px;
-  height: 254px;
-  border-radius: 30px;
-  background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  transition: transform 0.3s ease;
-}
-
-.hadith-neumorphic-card:hover {
-  transform: translateY(-4px);
-}
-.hadith-arabic-callout {
-  font-family: 'Amiri', serif;
-  direction: rtl;
-  text-align: right;
-  color: #fde047;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
+.neu-hadith-card {
+    border-radius: 20px;
+    background: #212121;
+    box-shadow: 8px 8px 18px rgb(15, 15, 15), 
+               -8px -8px 18px rgb(45, 45, 45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .neu-hadith-card:hover {
+    transform: translateY(-3px);
+  }
 /* ==========================================
    TOP NAVIGATION BAR STYLES
    ========================================== */
@@ -791,7 +782,7 @@
 
 
 <!-- TOP NAVIGATION HEADER START -->
-<!-- FIXED (stays at the top only, scrolls away): -->
+
 <header class="relative z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 clinic-header-inner">
 
@@ -870,7 +861,7 @@
 <img 
   src="doctor.jpeg" 
   alt="Ayesha Health Clinic Hijama Therapy" 
-  class="absolute inset-0 w-full h-full object-contain sm:object-cover object-top opacity-75 pointer-events-none z-0"
+  class="absolute inset-0 w-full h-full object-contain sm:object-cover object-top opacity-75 brightness-150 pointer-events-none z-0"
 >
     <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-emerald-950/90 pointer-events-none"></div>
     <div class="absolute inset-0 opacity-10 bg-arabesque pointer-events-none"></div>
@@ -883,24 +874,21 @@
           
 <!-- Dual-Tone Shield Ribbon Badge -->
 
-<h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight animate-float-hero !mt-6 sm:!mt-8">
-  <!-- Line 1: Revive the Sunnah of -->
-  <span class="inline-block">
-    <span class="flip-word" style="animation-delay: 0.1s;">Revive</span>
-    <span class="flip-word" style="animation-delay: 0.22s;">the</span>
-    <span class="flip-word" style="animation-delay: 0.34s;">Sunnah</span>
-    <span class="flip-word" style="animation-delay: 0.46s;">of</span>
+<h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight !mt-6 sm:!mt-8">
+
+  <span class="inline-block leading-tight">
+ 
+  <span class="flip-word font-black text-5xl sm:text-8xl tracking-wide bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100 bg-clip-text text-transparent drop-shadow-sm">
+    Dr Badar
   </span>
+  <br>
+ 
+  <span class="flip-word text-[11px] sm:text-3xl font-bold uppercase tracking-widest text-white/90">
+    [ Best Hijama Specialist in Gulbarga ]
+  </span>
+</span>
 
   <br class="hidden sm:inline" />
-
-  <!-- Line 2: Natural Healing & Detox -->
-  <span class="inline-block">
-    <span class="flip-word flip-gold-word" style="animation-delay: 0.62s;">Natural</span>
-    <span class="flip-word flip-gold-word" style="animation-delay: 0.74s;">Healing</span>
-    <span class="flip-word flip-gold-word" style="animation-delay: 0.86s;">&amp;</span>
-    <span class="flip-word flip-gold-word" style="animation-delay: 0.98s;">Detox</span>
-  </span>
 </h1>
           <!-- Hero Action Buttons (Clean responsive margin) -->
 <div class="pt-4 sm:pt-6 flex justify-center lg:justify-start">
@@ -951,7 +939,7 @@
         </div>
 
         <!-- Hero Right Column Feature Card -->
-<!-- WITH THIS (Dark border linings applied) -->
+
       <div class="lg:col-span-12 w-full lg:max-w-2xl lg:mx-auto">
   <!-- Outer Wrapper with Background Image -->
   <div class="relative rounded-none overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('doctor.jpeg')] shadow-2xl">
@@ -1010,103 +998,79 @@
 <!-- ==========================================================================
      PROPHETIC HADITH SECTION (COMPACT 3D ANIMATED CARDS)
      ========================================================================== -->
-<section id="hadith" class="py-6 sm:py-8 bg-[#181818] text-white border-t border-white/10 relative overflow-hidden">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<section id="hadith" class="py-6 sm:py-8 bg-[#181818] text-white border-t border-white/5 relative">
+  <div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
     
     <!-- Ultra-Compact Header -->
-    <div class="text-center mb-6">
-      <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/20">
-        Tibb-e-Nabawi
+    <div class="text-center mb-4 sm:mb-6">
+      <span class="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-amber-400">
+        ❖ Tibb-e-Nabawi ❖
       </span>
-      <h2 class="text-lg sm:text-xl font-black text-white tracking-tight mt-1">
+      <h2 class="text-base sm:text-xl font-black text-white tracking-tight mt-0.5">
         Authentic Hadiths on <span class="text-amber-400">Hijama</span>
       </h2>
     </div>
 
-    <!-- Cards Container -->
-    <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
+    <!-- 2-Column Mobile / 4-Column Desktop Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
       
-      <!-- Card 1 -->
-      <div class="hadith-neumorphic-card p-4 flex flex-col justify-between text-left">
+      <!-- Hadith 1 -->
+      <div class="neu-hadith-card p-3 sm:p-4 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-white/10">
-            <span class="text-[9px] font-mono font-bold text-amber-300">
-              Bukhari 5697
-            </span>
-            <i class="fa-solid fa-star-and-crescent text-amber-400/70 text-[10px]"></i>
-          </div>
-          <p class="text-right text-amber-200 font-serif text-xs mb-2 leading-tight" dir="rtl">
+          <span class="text-[9px] font-mono font-bold text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20 inline-block mb-1.5">
+            Bukhari 5697
+          </span>
+          <p class="text-right text-amber-100 font-serif text-xs sm:text-sm mb-1" dir="rtl">
             «إِنَّ أَفْضَلَ مَا تَدَاوَيْتُمْ بِهِ الْحِجَامَةُ»
           </p>
-          <p class="text-[11px] text-slate-300 italic leading-snug">
-            "Indeed, the best of remedies you have is <strong class="text-amber-300 not-italic">Hijama</strong>."
+          <p class="text-[11px] sm:text-xs text-slate-300 italic leading-snug">
+            "The best of remedies you have is <strong class="text-amber-300 not-italic">Hijama</strong>."
           </p>
-        </div>
-        <div class="text-[9px] text-emerald-400/80 pt-1 border-t border-white/5 text-center">
-          ❖ Best Remedy
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="hadith-neumorphic-card p-4 flex flex-col justify-between text-left">
+      <!-- Hadith 2 -->
+      <div class="neu-hadith-card p-3 sm:p-4 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-white/10">
-            <span class="text-[9px] font-mono font-bold text-amber-300">
-              Ibn Majah 3477
-            </span>
-            <i class="fa-solid fa-star-and-crescent text-amber-400/70 text-[10px]"></i>
-          </div>
-          <p class="text-right text-amber-200 font-serif text-xs mb-2 leading-tight" dir="rtl">
+          <span class="text-[9px] font-mono font-bold text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20 inline-block mb-1.5">
+            Ibn Majah 3477
+          </span>
+          <p class="text-right text-amber-100 font-serif text-xs sm:text-sm mb-1" dir="rtl">
             «عَلَيْكَ بِالْحِجَامَةِ»
           </p>
-          <p class="text-[11px] text-slate-300 italic leading-snug">
-            "Angels said: <strong class="text-amber-300 not-italic">'O Muhammad, enjoin your Ummah to practice Hijama.'</strong>"
+          <p class="text-[11px] sm:text-xs text-slate-300 italic leading-snug">
+            "Angels said: <strong class="text-amber-300 not-italic">'Enjoin your Ummah to practice Hijama.'</strong>"
           </p>
-        </div>
-        <div class="text-[9px] text-emerald-400/80 pt-1 border-t border-white/5 text-center">
-          ❖ Angelic Advice
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="hadith-neumorphic-card p-4 flex flex-col justify-between text-left">
+      <!-- Hadith 3 -->
+      <div class="neu-hadith-card p-3 sm:p-4 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-white/10">
-            <span class="text-[9px] font-mono font-bold text-amber-300">
-              Bukhari 5680
-            </span>
-            <i class="fa-solid fa-star-and-crescent text-amber-400/70 text-[10px]"></i>
-          </div>
-          <p class="text-right text-amber-200 font-serif text-xs mb-2 leading-tight" dir="rtl">
+          <span class="text-[9px] font-mono font-bold text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20 inline-block mb-1.5">
+            Bukhari 5680
+          </span>
+          <p class="text-right text-amber-100 font-serif text-xs sm:text-sm mb-1" dir="rtl">
             «الشِّفَاءُ فِي ثَلاَثَةٍ...»
           </p>
-          <p class="text-[11px] text-slate-300 italic leading-snug">
-            "Healing is in three: <strong class="text-amber-300 not-italic">Honey, the incision of a cupper,</strong> and cauterization."
+          <p class="text-[11px] sm:text-xs text-slate-300 italic leading-snug">
+            "Healing is in: <strong class="text-amber-300 not-italic">Honey, Hijama,</strong> and cauterization."
           </p>
-        </div>
-        <div class="text-[9px] text-emerald-400/80 pt-1 border-t border-white/5 text-center">
-          ❖ Three Cure Sources
         </div>
       </div>
 
-      <!-- Card 4 -->
-      <div class="hadith-neumorphic-card p-4 flex flex-col justify-between text-left">
+      <!-- Hadith 4 -->
+      <div class="neu-hadith-card p-3 sm:p-4 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-white/10">
-            <span class="text-[9px] font-mono font-bold text-amber-300">
-              Abi Dawud 3861
-            </span>
-            <i class="fa-solid fa-star-and-crescent text-amber-400/70 text-[10px]"></i>
-          </div>
-          <p class="text-right text-amber-200 font-serif text-xs mb-2 leading-tight" dir="rtl">
-            «مَنِ احْتَجَمَ لِسَبْعَ عَشْرَةَ...»
+          <span class="text-[9px] font-mono font-bold text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20 inline-block mb-1.5">
+            Abi Dawud 3861
+          </span>
+          <p class="text-right text-amber-100 font-serif text-xs sm:text-sm mb-1" dir="rtl">
+            «مَنِ احْتَجَمَ...»
           </p>
-          <p class="text-[11px] text-slate-300 italic leading-snug">
-            "Hijama on the <strong class="text-amber-300 not-italic">17th, 19th, or 21st</strong> is a cure for ailments."
+          <p class="text-[11px] sm:text-xs text-slate-300 italic leading-snug">
+            "Hijama on <strong class="text-amber-300 not-italic">17th, 19th, 21st</strong> is a cure for ailments."
           </p>
-        </div>
-        <div class="text-[9px] text-emerald-400/80 pt-1 border-t border-white/5 text-center">
-          ❖ Sunnah Dates
         </div>
       </div>
 
@@ -1941,9 +1905,6 @@
             <h4 class="text-sm font-bold text-white flex items-center gap-1.5">
               <i class="fa-solid fa-person text-amber-400 text-xs"></i> Whole Body Session
             </h4>
-            <span class="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-semibold px-1.5 py-0.5 rounded">
-              Popular
-            </span>
           </div>
           <p class="text-[11px] text-slate-300 mb-3 leading-snug">
             Full-coverage cupping over spine, meridians, and legs for complete detox.
@@ -1983,9 +1944,7 @@
             <h4 class="text-sm font-bold text-white flex items-center gap-1.5">
               <i class="fa-solid fa-user-doctor text-amber-400 text-xs"></i> Open Body Sessions
             </h4>
-            <span class="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-400/30 font-semibold px-1.5 py-0.5 rounded">
-              VIP Care
-            </span>
+            
           </div>
           <p class="text-[11px] text-slate-300 mb-3 leading-snug">
             Multi-zone session with wet, fire, dry gliding, and joint acupuncture.
@@ -2163,9 +2122,7 @@
               </p>
             </div>
 
-            <button onclick="openChecklistModal()" class="w-full py-3 rounded-none border border-emerald-600 text-emerald-800 hover:bg-emerald-50 font-bold text-xs flex items-center justify-center gap-2 transition">
-              <i class="fa-solid fa-file-medical"></i> View Pre & Post Hijama Protocol Guide
-            </button>
+            
           </div>
         </div>
 
@@ -2188,9 +2145,7 @@
         <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
           Special Herbal Formulations &amp; Tonics
         </h2>
-        <p class="text-slate-300 text-sm max-w-xl leading-relaxed">
-          Pure, naturally prepared Unani remedies crafted for vitality, strength, and overall wellness at Ayesha Health Clinic under expert guidance.
-        </p>
+        
       </div>
 
       <div class="lg:col-span-5 h-48 sm:h-56 rounded-2xl overflow-hidden bg-white/5 p-2 border border-white/10 backdrop-blur-sm">
@@ -2208,7 +2163,7 @@
             <img src="majooneshabab.jpeg" alt="Majoon-e-Shabab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm">
             
           </div>
-          <span class="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Classical Tonic</span>
+
           <h3 class="text-xl font-black text-white mb-1">Majoon-e-Shabab</h3>
           <p class="text-xs text-white/90 leading-snug mb-3">
             Natural Unani restorative formulated to eliminate daily fatigue, overcome physical debility, and restore natural energy.
@@ -2229,7 +2184,7 @@
             <img src="goldenmajoon.jpeg" alt="Golden Majoon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm">
             
           </div>
-          <span class="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Vitality Compound</span>
+        
           <h3 class="text-xl font-black text-white mb-1">Golden Majoon</h3>
           <p class="text-xs text-white/90 leading-snug mb-3">
             Rich botanical elixir blended with therapeutic herbs and natural resins for targeted male vigor.
@@ -2250,7 +2205,7 @@
             <img src="majoonejosh.jpeg" alt="Majoon-e-Josh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm">
             
           </div>
-          <span class="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Comprehensive Care</span>
+          
           <h3 class="text-xl font-black text-white mb-1">Majoon-e-Josh</h3>
           <p class="text-xs text-white/90 leading-snug mb-3">
             Multi-herb compound designed to strengthen neuromuscular pathways and improve reproductive stamina.
@@ -2271,7 +2226,7 @@
             <img src="majoonenawabi.jpeg" alt="Majoon-e-Nawabi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm">
             
           </div>
-          <span class="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Premium Formulation</span>
+      
           <h3 class="text-xl font-black text-white mb-1">Majoon-e-Nawabi</h3>
           <p class="text-xs text-white/90 leading-snug mb-3">
             Royal-standard Unani preparation crafted to strengthen nervous control and restore peak strength naturally.
@@ -2292,7 +2247,7 @@
             <img src="goldencaps.jpeg" alt="The Golden Caps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 blur-sm">
             
           </div>
-          <span class="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Capsule Formulation</span>
+         
           <h3 class="text-xl font-black text-white mb-1">The Golden Caps</h3>
           <p class="text-xs text-white/90 leading-snug mb-3">
             Concentrated herbal extract capsules formatted for rapid absorption and convenient daily dosage.
@@ -2312,7 +2267,7 @@
     <div class="mt-12 bg-slate-800/80 backdrop-blur-md text-white rounded-2xl p-6 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl">
       <div class="flex items-center gap-3 text-amber-400 font-bold text-sm">
         <i class="fa-solid fa-user-lock text-lg"></i>
-        <span>100% Discrete &amp; Confidential In-Clinic Consultation</span>
+        <span>Confidential Consultation</span>
       </div>
       <a href="tel:08884839689" class="w-full md:w-auto text-center px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider transition shadow-md">
         Call for Consultation
@@ -2322,19 +2277,15 @@
   </div>
 </section>
   <!-- Patient Reviews Section -->
- <!-- ==========================================================================
-     REVIEWS SECTION (COMPACT PATIENT RECOVERY GRID)
-     ========================================================================== -->
+
 <section id="reviews" class="py-8 sm:py-10 bg-emerald-950/60 border-t border-white/10 text-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Compact Header -->
     <div class="text-center mb-6">
-      <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/20">
-        Patient Reviews
-      </span>
+      
       <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight mt-1.5">
-        Clinical Outcomes &amp; Relief
+        Reviews
       </h2>
     </div>
 
@@ -2755,9 +2706,7 @@
               <span class="font-semibold text-white block">Evening Session:</span>
               <span>7:00 PM to 10:00 PM</span>
             </div>
-            <div class="text-[11px] text-gold-300 pt-1">
-              * Dedicated female practitioner available upon request.
-            </div>
+            
           </div>
         </div>
 
@@ -2801,22 +2750,6 @@
         dateInput.min = new Date().toISOString().split('T')[0];
       }
     });
-
-    // Mobile Navigation Toggle
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileBtn && mobileMenu) {
-      mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
 
     // Disease Category Filter
 // Enhanced Disease Category Filter linked directly to card attributes and title
@@ -3070,24 +3003,5 @@ function toggleCardFlip(cardId) {
   }
 }
   </script>
-  <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenuElement = document.getElementById('mobileMenu');
-
-  if (menuToggle && mobileMenuElement) {
-    menuToggle.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      mobileMenuElement.classList.toggle('hidden', isExpanded);
-      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-    });
-
-    mobileMenuElement.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuElement.classList.add('hidden');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-</script>
 </body>
 </html>
