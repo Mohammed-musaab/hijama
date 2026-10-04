@@ -4,66 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Ayesha Health Clinic | Certified Sunnah Hijama & Cupping Center Kalaburagi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Google Fonts: Plus Jakarta Sans & Amiri for Arabic/Islamic styling -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tailwind.local.css">
   
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            emerald: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              600: '#059669',
-              700: '#047857',
-              800: '#065f46',
-              900: '#064e3b',
-              950: '#022c22',
-            },
-            gold: {
-              300: '#fde047',
-              400: '#facc15',
-              500: '#eab308',
-              600: '#ca8a04',
-            },
-            sage: {
-              50: '#f6f7f6',
-              100: '#e3e8e4',
-              200: '#c5d0c8',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            arabic: ['"Amiri"', 'serif']
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/fontawesome.min.css">
 
   <style>
     :lang(ur) { font-family: 'Noto Nastaliq Urdu', serif; }
   :lang(kn) { font-family: 'Noto Sans Kannada', sans-serif; }
-    .bg-arabesque {
-      background-color: #064e3b;
-      background-image: radial-gradient(#ca8a04 0.75px, transparent 0.75px), radial-gradient(#ca8a04 0.75px, #064e3b 0.75px);
-      background-size: 30px 30px;
-      background-position: 0 0, 15px 15px;
-      opacity: 0.5;
-    }
     .custom-scrollbar::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -864,7 +812,6 @@
   class="absolute inset-0 w-full h-full object-contain sm:object-cover object-top opacity-75 brightness-150 pointer-events-none z-0"
 >
     <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-emerald-950/90 pointer-events-none"></div>
-    <div class="absolute inset-0 opacity-10 bg-arabesque pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -1100,7 +1047,7 @@
         <button class="benefit-header" onclick="toggleBenefit(this)">
           <div class="benefit-title-group">
             <span class="benefit-index">01</span>
-            <h3 class="benefit-title">Microcirculation &amp; Capillary Perfusion</h3>
+            <h3 class="benefit-title">Boosts Blood Flow&amp;Oxygen</h3>
           </div>
           <span class="see-details-pill">
             <span class="pill-text">See Details</span>
@@ -1109,7 +1056,7 @@
         </button>
         <div class="benefit-body">
           <div class="benefit-content">
-            The vacuum suction expands subcutaneous micro-vessels, breaking capillary stagnation and drawing sluggish deoxygenated blood to the surface layer. This triggers rapid nitric oxide release, vasodilation, and a rush of fresh oxygenated arterial blood to ischemic tissues.
+            The suction acts like a mini vacuum on your skin, pulling trapped or slow-moving blood to the surface. This causes your blood vessels to open wide, bringing a fresh wave of oxygen and nutrients straight to tired, tight muscles.
             <div class="benefit-key-point">
               <i class="fa-solid fa-microscope"></i>
               <div><strong>Clinical impact:</strong> Relieves deep muscular knots, reduces tension headaches, and accelerates regional cell repair.</div>
@@ -1123,7 +1070,7 @@
         <button class="benefit-header" onclick="toggleBenefit(this)">
           <div class="benefit-title-group">
             <span class="benefit-index">02</span>
-            <h3 class="benefit-title">Lymphatic Drainage &amp; Cellular Detoxification</h3>
+            <h3 class="benefit-title">Flush out Waste &amp; Cellular Detoxification</h3>
           </div>
           <span class="see-details-pill">
             <span class="pill-text">See Details</span>
@@ -1132,7 +1079,7 @@
         </button>
         <div class="benefit-body">
           <div class="benefit-content">
-            Unlike veins which rely on heart pressure, the lymphatic system relies on muscle contractions and external pressure changes. The negative sub-atmospheric pressure lifts stagnant interstitial fluid, clearing accumulated cellular metabolites, uric acid deposits, and heavy metabolic waste into active filtration channels.
+           Your lymphatic system is your body’s drainage network, but it doesn't have a pump like your heart to keep things moving. The suction lifts the tissue, unblocking trapped fluids and flushing away leftover cellular waste and acid build-up that make you feel sore.
             <div class="benefit-key-point">
               <i class="fa-solid fa-shield-halved"></i>
               <div><strong>Clinical impact:</strong> Unburdens hepatic and renal filtration, lowers inflammation markers (CRP), and boosts natural antibody response.</div>
@@ -1146,7 +1093,7 @@
         <button class="benefit-header" onclick="toggleBenefit(this)">
           <div class="benefit-title-group">
             <span class="benefit-index">03</span>
-            <h3 class="benefit-title">Endorphin Surge &amp; Pain Pathway Modulation</h3>
+            <h3 class="benefit-title">Blocks pain signals</h3>
           </div>
           <span class="see-details-pill">
             <span class="pill-text">See Details</span>
@@ -1155,7 +1102,7 @@
         </button>
         <div class="benefit-body">
           <div class="benefit-content">
-            Controlled superficial cupping stimulates dermatomal nerve fibers (A-beta sensory fibers), closing the neural pain gate in the dorsal horn of the spinal cord (Gate Control Theory). The central nervous system responds by flooding the bloodstream with natural endogenous opioids (endorphins and enkephalins).
+           Cupping stimulates nerve endings in your skin to send fast signals to your spinal cord, which effectively "blocks" your brain from registering pain (like rubbing a bumped elbow). At the same time, your brain releases its own natural painkillers—endorphins—to help you feel relaxed and pain-free.
             <div class="benefit-key-point">
               <i class="fa-solid fa-heart-pulse"></i>
               <div><strong>Clinical impact:</strong> Non-pharmacological relief for sciatica, lumbar spondylosis, neck spasms, and chronic fibromyalgia.</div>
@@ -1169,7 +1116,7 @@
         <button class="benefit-header" onclick="toggleBenefit(this)">
           <div class="benefit-title-group">
             <span class="benefit-index">04</span>
-            <h3 class="benefit-title">Anti-Inflammatory &amp; Cytokine Rebalancing</h3>
+            <h3 class="benefit-title">Reduces Inflammation &amp; Restores Balance</h3>
           </div>
           <span class="see-details-pill">
             <span class="pill-text">See Details</span>
@@ -1178,7 +1125,7 @@
         </button>
         <div class="benefit-body">
           <div class="benefit-content">
-            Localized suction triggers controlled micro-trauma signaling, prompting the body to switch from a pro-inflammatory state (high TNF-alpha, IL-6) to an anti-inflammatory repair state (high IL-10, heat-shock proteins). This resets chronic low-grade tissue inflammation.
+           The gentle pull creates tiny, harmless micro-signals that trick your body into repair mode. It tells your immune system to stop sending "irritation" chemicals and start producing healing proteins, turning off long-term, dull acheiness and speeding up recovery.
             <div class="benefit-key-point">
               <i class="fa-solid fa-dna"></i>
               <div><strong>Clinical impact:</strong> Reduces joint stiffness in osteoarthritis, calms auto-reactive skin flares, and restores connective tissue mobility.</div>
